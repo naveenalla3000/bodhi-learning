@@ -100,7 +100,7 @@ export default function WhyChooseGrid() {
                 Transform your institution with proven curriculum frameworks
               </h3>
             </div>
-            <button className="bg-secondary text-on-secondary font-bold px-10 py-4 rounded-lg hover:brightness-110 transition-all whitespace-nowrap">
+            <button className="bg-secondary text-on-secondary font-bold px-10 py-4 rounded-full hover:brightness-110 transition-all whitespace-nowrap">
               Partner With Us
             </button>
           </div>

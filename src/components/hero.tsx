@@ -18,10 +18,10 @@ export default function Hero() {
         </p>
 
         <div className="flex justify-center gap-6 flex-wrap">
-          <button className="bg-primary text-on-primary font-bold px-10 py-5 rounded-xl hover:shadow-2xl transition-all transform hover:-translate-y-1">
+          <button className="bg-primary text-on-primary font-bold px-10 py-5 rounded-full hover:shadow-2xl transition-all transform hover:-translate-y-1">
             Explore Our Programs
           </button>
-          <button className="border-2 border-primary text-primary font-bold px-10 py-5 rounded-xl hover:bg-surface-container-low transition-all">
+          <button className="border-2 border-primary text-primary font-bold px-10 py-5 rounded-full hover:bg-surface-container-low transition-all">
             Talk To Us
           </button>
         </div>

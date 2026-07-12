@@ -18,7 +18,7 @@ export default function CtaSection() {
           Join 12,000+ learners who chose to grow with Bodhi Learning.
         </p>
         <div className="flex justify-center">
-          <button className="bg-secondary text-on-secondary font-bold px-12 py-5 rounded-xl hover:shadow-2xl hover:brightness-110 transition-all transform hover:-translate-y-1 text-lg">
+          <button className="bg-secondary text-on-secondary font-bold px-12 py-5 rounded-full hover:shadow-2xl hover:brightness-110 transition-all transform hover:-translate-y-1 text-lg">
             Book a Free Consultation
           </button>
         </div>

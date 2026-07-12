@@ -9,7 +9,6 @@ const navLinks = [
   { label: "Home", href: "/" },
   { label: "About", href: "/about" },
   { label: "Courses", href: "/courses" },
-  { label: "Contact", href: "/contact" },
 ];
 
 const programs = [
@@ -17,6 +16,14 @@ const programs = [
   { icon: "psychology", title: "Teacher Training", sub: "Professional educator workshops", href: "/programs/teacher-training" },
   { icon: "corporate_fare", title: "Corporate Training", sub: "Strategic business communication", href: "/programs/corporate-training" },
   { icon: "handshake", title: "School Partnerships", sub: "Curriculum integration models", href: "/programs/school-partnerships" },
+];
+
+const mobileLinks = [
+  { label: "Home", href: "/" },
+  { label: "About", href: "/about" },
+  { label: "Courses", href: "/courses" },
+  { label: "Programs", href: "/programs" },
+  { label: "Contact", href: "/contact" },
 ];
 
 export default function Nav() {
@@ -29,6 +36,25 @@ export default function Nav() {
     window.addEventListener("scroll", onScroll, { passive: true });
     return () => window.removeEventListener("scroll", onScroll);
   }, []);
+
+  const NavLink = ({ label, href }: { label: string; href: string }) => {
+    const isActive = pathname === href;
+    return (
+      <Link
+        href={href}
+        className={`relative group font-[--font-montserrat-var] text-sm tracking-wider uppercase transition-colors duration-300 ${
+          isActive ? "text-primary font-bold" : "text-primary font-medium hover:text-primary/70"
+        }`}
+      >
+        {label}
+        <span
+          className={`absolute -bottom-1 left-0 h-[1px] bg-secondary transition-all duration-500 ${
+            isActive ? "w-full" : "w-0 group-hover:w-full"
+          }`}
+        />
+      </Link>
+    );
+  };
 
   return (
     <div className="fixed top-0 left-0 right-0 z-50 px-4 md:px-8 pt-4">
@@ -48,29 +74,11 @@ export default function Nav() {
             </span>
           </Link>
 
-          {/* Desktop Nav Links */}
+          {/* Desktop Nav Links: Home · About · Courses · Programs ▾ · Contact */}
           <div className="hidden md:flex items-center gap-8">
-            {navLinks.map(({ label, href }) => {
-              const isActive = pathname === href;
-              return (
-                <Link
-                  key={href}
-                  href={href}
-                  className={`relative group font-[--font-montserrat-var] text-sm tracking-wider uppercase transition-colors duration-300 ${
-                    isActive
-                      ? "text-primary font-bold"
-                      : "text-primary font-medium hover:text-primary/70"
-                  }`}
-                >
-                  {label}
-                  <span
-                    className={`absolute -bottom-1 left-0 h-[1px] bg-secondary transition-all duration-500 ${
-                      isActive ? "w-full" : "w-0 group-hover:w-full"
-                    }`}
-                  />
-                </Link>
-              );
-            })}
+            {navLinks.map(({ label, href }) => (
+              <NavLink key={href} label={label} href={href} />
+            ))}
 
             {/* Programs Dropdown */}
             <div className="group relative">
@@ -104,6 +112,8 @@ export default function Nav() {
                 </div>
               </div>
             </div>
+
+            <NavLink label="Contact" href="/contact" />
           </div>
 
           {/* Mobile Menu Toggle */}
@@ -122,7 +132,7 @@ export default function Nav() {
         {mobileOpen && (
           <div className="md:hidden border-t border-white/20 mt-3">
             <div className="px-5 py-4 flex flex-col gap-1">
-              {[...navLinks, { label: "Programs", href: "/programs" }].map(({ label, href }) => (
+              {mobileLinks.map(({ label, href }) => (
                 <Link
                   key={href}
                   href={href}
