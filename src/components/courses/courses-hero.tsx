@@ -1,5 +1,5 @@
 import Image from "next/image";
-import Link from "next/link";
+import AnimatedButton from "@/components/animated-button";
 
 export default function CoursesHero() {
   return (
@@ -28,15 +28,12 @@ export default function CoursesHero() {
             Elevate your linguistic capabilities with an expert-led curriculum designed for the highest professional standards.
           </p>
           <div className="flex flex-wrap gap-4 pt-2">
-            <Link
-              href="/courses/advanced-english-proficiency"
-              className="bg-on-primary text-primary px-8 py-3.5 rounded-full font-semibold hover:bg-surface-container transition-colors"
-            >
+            <AnimatedButton href="/courses/advanced-english-proficiency" variant="outline-light" size="md">
               Enroll Today
-            </Link>
-            <button className="border border-on-primary/60 text-on-primary px-8 py-3.5 rounded-full font-semibold hover:bg-on-primary/10 transition-colors">
+            </AnimatedButton>
+            <AnimatedButton href="/courses/advanced-english-proficiency" variant="outline-light" size="md">
               View Syllabus
-            </button>
+            </AnimatedButton>
           </div>
         </div>
 

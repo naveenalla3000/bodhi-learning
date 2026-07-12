@@ -5,7 +5,7 @@ const narrativeImg =
 
 export default function OurNarrative() {
   return (
-    <section className="py-20 max-w-7xl mx-auto px-16">
+    <section className="py-20 max-w-7xl mx-auto px-6">
       <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
         {/* Left — text */}
         <div className="space-y-8" data-gsap="slide-left">

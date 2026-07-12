@@ -20,7 +20,7 @@ const milestones = [
 export default function Milestones() {
   return (
     <section className="bg-surface-container-low py-20">
-      <div className="max-w-7xl mx-auto px-6 md:px-16">
+      <div className="max-w-7xl mx-auto px-6">
         <div className="mb-12" data-gsap="fade-up">
           <h2 className="font-montserrat font-semibold text-3xl text-primary">
             Evolutionary Milestones

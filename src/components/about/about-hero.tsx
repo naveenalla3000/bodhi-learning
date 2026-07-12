@@ -1,7 +1,7 @@
 export default function AboutHero() {
   return (
     <section className="relative py-20 bg-surface-container-low overflow-hidden">
-      <div className="max-w-7xl mx-auto px-16 text-center" data-gsap="fade-up">
+      <div className="max-w-7xl mx-auto px-6 text-center" data-gsap="fade-up">
         <div className="inline-block px-4 py-1 bg-surface-container-lowest border border-outline-variant rounded-full text-xs font-bold tracking-widest text-primary mb-6 uppercase">
           Established 2026
         </div>

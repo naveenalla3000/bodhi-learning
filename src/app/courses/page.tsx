@@ -15,7 +15,7 @@ export default function CoursesPage() {
     <>
       <Nav />
       <main className="pt-28">
-        <div className="max-w-7xl mx-auto px-6 md:px-16 py-16">
+        <div className="max-w-7xl mx-auto px-6 py-16">
           <CoursesHero />
           <CourseGrid />
         </div>

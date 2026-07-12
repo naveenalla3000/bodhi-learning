@@ -23,7 +23,7 @@ const faculty = [
 
 export default function ScholarlyLeadership() {
   return (
-    <section className="py-20 max-w-7xl mx-auto px-16">
+    <section className="py-20 max-w-7xl mx-auto px-6">
       <div className="flex flex-col md:flex-row justify-between items-end mb-16 gap-8" data-gsap="fade-up">
         <div className="max-w-2xl">
           <h2 className="font-montserrat font-semibold text-3xl text-primary mb-4">

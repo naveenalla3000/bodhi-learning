@@ -5,6 +5,7 @@ import Link from "next/link";
 import Nav from "@/components/nav";
 import Footer from "@/components/footer";
 import { getCourse, getAllSlugs } from "@/lib/courses";
+import AnimatedButton from "@/components/animated-button";
 
 export function generateStaticParams() {
   return getAllSlugs().map((slug) => ({ slug }));
@@ -52,7 +53,7 @@ export default async function CourseDetailPage({
             <div className="absolute inset-0 bg-primary/80" />
           </div>
 
-          <div className="relative z-10 max-w-7xl mx-auto px-6 md:px-16 py-24 text-on-primary" data-gsap="fade-up">
+          <div className="relative z-10 max-w-7xl mx-auto px-6 py-24 text-on-primary" data-gsap="fade-up">
             <div className="max-w-3xl">
               <span className="inline-block bg-secondary text-on-secondary px-4 py-1.5 rounded-full text-xs font-bold uppercase tracking-widest mb-6">
                 {course.category}
@@ -85,9 +86,9 @@ export default async function CourseDetailPage({
               </div>
 
               <div className="flex flex-col sm:flex-row items-center gap-4">
-                <button className="w-full sm:w-auto bg-on-primary text-primary px-10 py-4 rounded-full font-bold hover:bg-surface-container transition-colors shadow-xl">
+                <AnimatedButton href="/contact" variant="outline-light" size="md">
                   Enroll Today — {course.price}
-                </button>
+                </AnimatedButton>
                 <span className="flex items-center gap-2 text-on-primary/70 text-sm italic">
                   <span className="material-symbols-outlined text-[18px]">info</span>
                   Installment plans available
@@ -99,7 +100,7 @@ export default async function CourseDetailPage({
 
         {/* ── Academic Intent ─────────────────────────────────── */}
         <section className="py-24 bg-surface">
-          <div className="max-w-7xl mx-auto px-6 md:px-16">
+          <div className="max-w-7xl mx-auto px-6">
             <div className="grid grid-cols-1 lg:grid-cols-12 gap-16 items-start">
               <div className="lg:col-span-4" data-gsap="slide-left">
                 <h2 className="font-[--font-cormorant] text-4xl font-bold text-primary mb-4 leading-tight">
@@ -150,7 +151,7 @@ export default async function CourseDetailPage({
 
         {/* ── Curriculum Framework ─────────────────────────────── */}
         <section className="py-24 bg-surface-container-lowest">
-          <div className="max-w-7xl mx-auto px-6 md:px-16">
+          <div className="max-w-7xl mx-auto px-6">
             <div className="mb-16 text-center" data-gsap="fade-up">
               <h2 className="font-[--font-cormorant] text-4xl md:text-5xl font-bold text-primary mb-4">
                 Curriculum Framework
@@ -201,7 +202,7 @@ export default async function CourseDetailPage({
 
         {/* ── Lead Instructor ──────────────────────────────────── */}
         <section className="py-24 bg-surface-container-low">
-          <div className="max-w-7xl mx-auto px-6 md:px-16">
+          <div className="max-w-7xl mx-auto px-6">
             <div className="bg-surface-container-lowest rounded-2xl overflow-hidden grid grid-cols-1 lg:grid-cols-2 border border-surface-container-high shadow-sm" data-gsap="scale-in">
               <div className="relative min-h-[420px]">
                 <Image
@@ -240,7 +241,7 @@ export default async function CourseDetailPage({
 
         {/* ── Course Features ──────────────────────────────────── */}
         <section className="py-24 bg-surface-container-lowest">
-          <div className="max-w-7xl mx-auto px-6 md:px-16">
+          <div className="max-w-7xl mx-auto px-6">
             <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 divide-y sm:divide-y-0 sm:divide-x divide-surface-container-high border border-surface-container-high rounded-2xl overflow-hidden" data-gsap="fade-up">
               {course.features.map((f) => (
                 <div key={f.title} className="p-8 text-center flex flex-col items-center gap-4">
@@ -265,7 +266,7 @@ export default async function CourseDetailPage({
               <rect width="100%" height="100%" fill="url(#dots-cta)" />
             </svg>
           </div>
-          <div className="relative z-10 max-w-3xl mx-auto px-6 md:px-16" data-gsap="scale-in">
+          <div className="relative z-10 max-w-3xl mx-auto px-6" data-gsap="scale-in">
             <h2 className="font-[--font-cormorant] text-4xl md:text-5xl font-bold mb-6">
               Start Your Mastery Journey
             </h2>
@@ -273,15 +274,12 @@ export default async function CourseDetailPage({
               Applications are reviewed on a rolling basis. Secure your seat in our next cohort and begin your transformation.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <button className="bg-on-primary text-primary px-12 py-4 rounded-full font-bold hover:bg-surface transition-all">
+              <AnimatedButton href="/contact" variant="outline-light" size="lg">
                 Enroll in {course.title}
-              </button>
-              <Link
-                href="/contact"
-                className="border border-on-primary/60 text-on-primary px-12 py-4 rounded-full font-bold hover:bg-on-primary/10 transition-all"
-              >
+              </AnimatedButton>
+              <AnimatedButton href="/contact" variant="secondary" size="lg">
                 Book a Consultation
-              </Link>
+              </AnimatedButton>
             </div>
           </div>
         </section>

@@ -1,6 +1,7 @@
 "use client";
 
 import { useState } from "react";
+import AnimatedButton from "@/components/animated-button";
 
 const ORG_TYPES = [
   "Higher Education Institution",
@@ -79,12 +80,9 @@ export default function ContactForm() {
         />
       </div>
 
-      <button
-        type="submit"
-        className="font-montserrat bg-primary text-on-primary px-10 py-3.5 rounded-full font-semibold hover:opacity-90 transition-all shadow-sm"
-      >
+      <AnimatedButton type="submit" variant="primary" size="md">
         Submit Inquiry
-      </button>
+      </AnimatedButton>
     </form>
   );
 }

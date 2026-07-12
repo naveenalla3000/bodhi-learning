@@ -2,6 +2,7 @@
 
 import { useEffect, useRef } from "react";
 import gsap from "gsap";
+import AnimatedButton from "@/components/animated-button";
 
 export default function Hero() {
   const sectionRef = useRef<HTMLElement>(null);
@@ -79,12 +80,16 @@ export default function Hero() {
         </p>
 
         <div className="flex justify-center gap-6 flex-wrap">
-          <button className="hero-btn bg-primary text-on-primary font-bold px-10 py-5 rounded-full hover:shadow-2xl hover:shadow-primary/20 transition-all duration-300 hover:-translate-y-1">
-            Explore Our Programs
-          </button>
-          <button className="hero-btn border-2 border-primary text-primary font-bold px-10 py-5 rounded-full hover:bg-surface-container-low transition-all duration-300">
-            Talk To Us
-          </button>
+          <span className="hero-btn">
+            <AnimatedButton href="/programs" variant="primary" size="lg">
+              Explore Our Programs
+            </AnimatedButton>
+          </span>
+          <span className="hero-btn">
+            <AnimatedButton href="/contact" variant="outline-dark" size="lg">
+              Talk To Us
+            </AnimatedButton>
+          </span>
         </div>
       </div>
 

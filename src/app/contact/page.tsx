@@ -80,7 +80,7 @@ export default function ContactPage() {
         </section>
 
         {/* ── Bento Grid ───────────────────────────────────────── */}
-        <section className="max-w-7xl mx-auto px-6 md:px-16 pb-28">
+        <section className="max-w-7xl mx-auto px-6 pb-28">
           <div className="grid grid-cols-1 lg:grid-cols-12 gap-8">
 
             {/* Form — 7 cols */}
@@ -153,7 +153,7 @@ export default function ContactPage() {
             }}
           />
 
-          <div className="relative z-10 max-w-7xl mx-auto px-6 md:px-16 grid grid-cols-1 lg:grid-cols-12 gap-16">
+          <div className="relative z-10 max-w-7xl mx-auto px-6 grid grid-cols-1 lg:grid-cols-12 gap-16">
 
             {/* Left — heading */}
             <div className="lg:col-span-4 flex flex-col justify-start" data-gsap="slide-left">
