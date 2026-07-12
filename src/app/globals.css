@@ -106,10 +106,3 @@ body {
   font-family: var(--font-inter);
 }
 
-/* GSAP initial hidden states — prevents flash before JS runs */
-[data-gsap='fade-up'],
-[data-gsap='slide-left'],
-[data-gsap='slide-right'],
-[data-gsap='scale-in'] {
-  opacity: 0;
-}
