@@ -80,16 +80,16 @@ export default function Nav() {
     return () => ScrollTrigger.getAll().forEach((t) => t.kill());
   }, []);
 
-  // GSAP sidebar open / close
+  // GSAP sidebar — circular clip-path reveal from top-left corner
   useEffect(() => {
     const sidebar = sidebarRef.current;
     const backdrop = backdropRef.current;
     if (!sidebar || !backdrop) return;
 
-    // First render — set closed state silently
+    // First render — hide silently
     if (!hasMounted.current) {
       hasMounted.current = true;
-      gsap.set(sidebar, { x: "100%" });
+      gsap.set(sidebar, { clipPath: "circle(0% at 100% 0%)" });
       gsap.set(backdrop, { opacity: 0, pointerEvents: "none" });
       return;
     }
@@ -97,31 +97,30 @@ export default function Nav() {
     tlRef.current?.kill();
 
     if (mobileOpen) {
-      gsap.set(sidebar.querySelectorAll(".s-header"), { opacity: 0, x: 20 });
-      gsap.set(sidebar.querySelectorAll(".s-nav-item"), { opacity: 0, x: 28 });
-      gsap.set(sidebar.querySelectorAll(".s-label"), { opacity: 0, y: 8 });
-      gsap.set(sidebar.querySelectorAll(".s-program"), { opacity: 0, x: 16 });
-      gsap.set(sidebar.querySelectorAll(".s-footer"), { opacity: 0, y: 12 });
+      // Reset inner elements
+      gsap.set(sidebar.querySelectorAll(".s-header"), { opacity: 0, y: -12 });
+      gsap.set(sidebar.querySelectorAll(".s-nav-item"), { opacity: 0, y: 14 });
 
       tlRef.current = gsap.timeline()
-        .to(backdrop, { opacity: 1, pointerEvents: "auto", duration: 0.28, ease: "power2.out" })
-        .to(sidebar, { x: "0%", duration: 0.45, ease: "power3.out" }, "<0.04")
-        .to(sidebar.querySelectorAll(".s-header"), { opacity: 1, x: 0, duration: 0.3, ease: "power2.out" }, "-=0.2")
-        .to(sidebar.querySelectorAll(".s-nav-item"), { opacity: 1, x: 0, duration: 0.32, stagger: 0.065, ease: "power2.out" }, "-=0.16")
-        .to(sidebar.querySelectorAll(".s-label"), { opacity: 1, y: 0, duration: 0.24, ease: "power2.out" }, "-=0.1")
-        .to(sidebar.querySelectorAll(".s-program"), { opacity: 1, x: 0, duration: 0.28, stagger: 0.05, ease: "power2.out" }, "-=0.1")
-        .to(sidebar.querySelectorAll(".s-footer"), { opacity: 1, y: 0, duration: 0.28, ease: "power2.out" }, "-=0.06");
+        // Backdrop fades in
+        .to(backdrop, { opacity: 1, pointerEvents: "auto", duration: 0.3, ease: "power2.out" })
+        // Circle expands from top-left corner outward
+        .to(sidebar, { clipPath: "circle(150% at 100% 0%)", duration: 0.7, ease: "power3.out" }, "<")
+        // Header drops in
+        .to(sidebar.querySelectorAll(".s-header"), { opacity: 1, y: 0, duration: 0.3, ease: "power2.out" }, "-=0.25")
+        // Nav items stagger up
+        .to(sidebar.querySelectorAll(".s-nav-item"), { opacity: 1, y: 0, duration: 0.32, stagger: 0.07, ease: "power2.out" }, "-=0.18");
 
     } else {
       gsap.set(backdrop, { pointerEvents: "none" });
 
       tlRef.current = gsap.timeline()
-        .to(sidebar.querySelectorAll(".s-footer"), { opacity: 0, y: 8, duration: 0.14, ease: "power2.in" })
-        .to(sidebar.querySelectorAll(".s-program"), { opacity: 0, x: 12, duration: 0.14, stagger: 0.03, ease: "power2.in" }, "<0.03")
-        .to(sidebar.querySelectorAll(".s-nav-item"), { opacity: 0, x: 12, duration: 0.14, stagger: 0.03, ease: "power2.in" }, "<0.04")
-        .to(sidebar.querySelectorAll(".s-header"), { opacity: 0, x: 10, duration: 0.12, ease: "power2.in" }, "-=0.04")
-        .to(sidebar, { x: "100%", duration: 0.4, ease: "power3.in" }, "-=0.08")
-        .to(backdrop, { opacity: 0, duration: 0.26, ease: "power2.in" }, "<0.08");
+        // Items fade out
+        .to(sidebar.querySelectorAll(".s-nav-item"), { opacity: 0, y: 8, duration: 0.15, stagger: 0.03, ease: "power2.in" })
+        .to(sidebar.querySelectorAll(".s-header"), { opacity: 0, duration: 0.12, ease: "power2.in" }, "<0.04")
+        // Circle collapses back to top-left
+        .to(sidebar, { clipPath: "circle(0% at 100% 0%)", duration: 0.55, ease: "power3.in" }, "-=0.05")
+        .to(backdrop, { opacity: 0, duration: 0.28, ease: "power2.in" }, "<0.08");
     }
   }, [mobileOpen]);
 
@@ -202,105 +201,43 @@ export default function Nav() {
         onClick={() => setMobileOpen(false)}
       />
 
-      {/* Sidebar — GSAP controls x transform */}
+      {/* Sidebar — GSAP controls clipPath */}
       <div
         ref={sidebarRef}
-        className="fixed top-0 right-0 h-full z-[60] md:hidden w-[88vw] max-w-[360px] flex flex-col shadow-2xl overflow-hidden"
-        style={{ transform: "translateX(100%)", backgroundColor: "#FAFAF8" }}
+        className="fixed inset-0 z-[60] md:hidden w-full h-full bg-white flex flex-col"
       >
-        {/* Decorative background circles */}
-        <div className="absolute -top-20 -right-20 w-64 h-64 rounded-full opacity-[0.06] pointer-events-none" style={{ backgroundColor: "#0C3B20" }} />
-        <div className="absolute bottom-32 -right-10 w-40 h-40 rounded-full opacity-[0.04] pointer-events-none" style={{ backgroundColor: "#944b00" }} />
-
-        {/* Thin amber left-edge accent */}
-        <div className="absolute top-0 left-0 w-[3px] h-full bg-gradient-to-b from-secondary via-secondary/40 to-transparent pointer-events-none" />
-
         {/* Header */}
-        <div className="s-header relative flex justify-between items-center px-7 pt-7 pb-5">
-          <Link href="/" onClick={() => setMobileOpen(false)} className="flex items-center gap-2.5 group">
+        <div className="s-header flex justify-between items-center px-6 pt-6 pb-5 border-b border-gray-100">
+          <Link href="/" onClick={() => setMobileOpen(false)} className="flex items-center gap-2.5">
             <Image src="/logo.png" alt="BODHI LEARNING" width={28} height={28} />
-            <span className="font-[--font-cormorant] text-[15px] font-bold text-primary tracking-[0.12em] uppercase group-hover:opacity-70 transition-opacity">
+            <span className="font-[--font-cormorant] text-[15px] font-bold text-primary tracking-[0.12em] uppercase">
               BODHI LEARNING
             </span>
           </Link>
-          <button
-            onClick={() => setMobileOpen(false)}
-            className="w-8 h-8 flex items-center justify-center text-primary/50 hover:text-primary transition-colors"
-          >
+          <button onClick={() => setMobileOpen(false)} className="text-primary/40 hover:text-primary transition-colors">
             <span className="material-symbols-outlined text-[22px]">close</span>
           </button>
         </div>
 
-        {/* Divider line */}
-        <div className="mx-6 h-px bg-primary/10" />
-
         {/* Nav links */}
-        <div className="flex-1 overflow-y-auto px-6 pt-6 pb-4">
-          <nav className="space-y-0.5">
-            {mobileLinks.map(({ label, href }) => {
-              const isActive = pathname === href;
-              return (
-                <Link
-                  key={href}
-                  href={href}
-                  onClick={() => setMobileOpen(false)}
-                  className={`s-nav-item group flex items-center justify-between px-4 py-3.5 rounded-xl transition-all duration-200 ${
-                    isActive
-                      ? "bg-primary/6 text-secondary"
-                      : "text-primary hover:bg-primary/4"
-                  }`}
-                >
-                  <span className={`font-montserrat text-sm tracking-wider uppercase transition-colors duration-200 ${
-                    isActive ? "font-bold text-secondary" : "font-semibold"
-                  }`}>
-                    {label}
-                  </span>
-                  <span className={`material-symbols-outlined text-[16px] transition-all duration-300 ${
-                    isActive ? "text-secondary opacity-100 translate-x-0" : "opacity-0 -translate-x-2"
-                  }`}>
-                    arrow_forward
-                  </span>
-                </Link>
-              );
-            })}
-          </nav>
-
-          {/* Programs sub-links */}
-          <div className="mt-6 pt-5 border-t border-primary/8">
-            <p className="s-label font-montserrat text-[9px] font-bold tracking-[0.22em] uppercase text-primary/30 px-4 mb-2">
-              Programs
-            </p>
-            {programs.map((p) => (
+        <nav className="flex-1 overflow-y-auto px-4 py-4 space-y-0.5">
+          {mobileLinks.map(({ label, href }) => {
+            const isActive = pathname === href;
+            return (
               <Link
-                key={p.href}
-                href={p.href}
+                key={href}
+                href={href}
                 onClick={() => setMobileOpen(false)}
-                className="s-program flex items-center gap-3 px-4 py-2.5 rounded-xl text-primary/60 hover:text-primary hover:bg-primary/4 transition-all duration-200"
+                className={`s-nav-item flex items-center justify-between px-4 py-3 rounded-xl font-montserrat text-sm font-semibold tracking-wider uppercase transition-all duration-200 ${
+                  isActive ? "bg-primary text-white" : "text-primary hover:bg-gray-50"
+                }`}
               >
-                <span className="material-symbols-outlined text-[15px]">{p.icon}</span>
-                <span className="font-montserrat text-xs font-medium">{p.title}</span>
+                {label}
+                {isActive && <span className="material-symbols-outlined text-[15px] opacity-70">arrow_forward</span>}
               </Link>
-            ))}
-          </div>
-        </div>
-
-        {/* Footer */}
-        <div className="s-footer px-7 py-6 border-t border-primary/8">
-          <div className="flex items-center justify-between">
-            <div>
-              <p className="font-montserrat text-[9px] font-bold tracking-[0.2em] uppercase text-primary/30 mb-1">Contact Us</p>
-              <p className="font-inter text-primary/60 text-xs">hello@bodhilearning.com</p>
-            </div>
-            <Link
-              href="/contact"
-              onClick={() => setMobileOpen(false)}
-              className="flex items-center gap-1.5 font-montserrat text-[10px] font-bold tracking-widest uppercase text-white bg-primary px-4 py-2.5 rounded-full hover:bg-secondary transition-colors duration-300"
-            >
-              <span className="material-symbols-outlined text-[13px]">arrow_outward</span>
-              Connect
-            </Link>
-          </div>
-        </div>
+            );
+          })}
+        </nav>
       </div>
     </>
   );
