@@ -152,10 +152,10 @@ export default function CoreFocus() {
               <span className="material-symbols-outlined text-secondary-fixed text-[40px] mb-6 block">
                 school
               </span>
-              <h3 className="font-montserrat font-semibold text-2xl mb-3 text-white">
+              <h3 className="font-montserrat font-semibold text-2xl mb-3 text-secondary">
                 Teacher Education
               </h3>
-              <p className="text-primary-fixed leading-relaxed">
+              <p className="text-white leading-relaxed">
                 Pedagogical excellence for educators aiming to transform the
                 classroom experience.
               </p>

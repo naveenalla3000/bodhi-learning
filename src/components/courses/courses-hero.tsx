@@ -21,17 +21,17 @@ export default function CoursesHero() {
           <span className="inline-block px-4 py-1.5 bg-secondary text-on-secondary rounded-full text-xs font-bold tracking-widest uppercase">
             Featured
           </span>
-          <h1 className="font-[--font-cormorant] text-4xl md:text-5xl font-bold leading-tight">
+          <h1 className="font-montserrat text-2xl md:text-3xl font-bold leading-tight">
             Advanced English Proficiency
           </h1>
           <p className="text-on-primary/80 text-lg max-w-xl leading-relaxed">
             Elevate your linguistic capabilities with an expert-led curriculum designed for the highest professional standards.
           </p>
-          <div className="flex flex-wrap gap-4 pt-2">
-            <AnimatedButton href="/courses/advanced-english-proficiency" variant="outline-light" size="md">
+          <div className="flex flex-col sm:flex-row gap-4 pt-2">
+            <AnimatedButton href="/courses/advanced-english-proficiency" variant="outline-light" size="md" className="w-full sm:flex-1">
               Enroll Today
             </AnimatedButton>
-            <AnimatedButton href="/courses/advanced-english-proficiency" variant="outline-light" size="md">
+            <AnimatedButton href="/courses/advanced-english-proficiency" variant="outline-light" size="md" className="w-full sm:flex-1">
               View Syllabus
             </AnimatedButton>
           </div>

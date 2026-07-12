@@ -12,10 +12,10 @@ export default function AboutCta() {
           through our specialized tracks.
         </p>
         <div className="flex flex-col sm:flex-row gap-4 justify-center">
-          <AnimatedButton href="/courses" variant="primary" size="md">
+          <AnimatedButton href="/courses" variant="primary" size="md" className="flex-1 sm:flex-none w-full sm:w-auto">
             Explore Curriculum
           </AnimatedButton>
-          <AnimatedButton href="/contact" variant="outline-dark" size="md">
+          <AnimatedButton href="/contact" variant="outline-dark" size="md" className="flex-1 sm:flex-none w-full sm:w-auto">
             Contact Admissions
           </AnimatedButton>
         </div>

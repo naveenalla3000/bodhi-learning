@@ -58,7 +58,7 @@ export default async function CourseDetailPage({
               <span className="inline-block bg-secondary text-on-secondary px-4 py-1.5 rounded-full text-xs font-bold uppercase tracking-widest mb-6">
                 {course.category}
               </span>
-              <h1 className="font-[--font-cormorant] text-4xl md:text-5xl lg:text-6xl font-bold mb-4 leading-tight">
+              <h1 className="font-montserrat text-3xl md:text-4xl lg:text-5xl font-bold mb-4 leading-tight">
                 {course.title}
               </h1>
               <p className="text-on-primary/70 text-xl font-light italic mb-8">
@@ -86,7 +86,7 @@ export default async function CourseDetailPage({
               </div>
 
               <div className="flex flex-col sm:flex-row items-center gap-4">
-                <AnimatedButton href="/contact" variant="outline-light" size="md">
+                <AnimatedButton href="/contact" variant="outline-light" size="md" className="w-full sm:w-auto">
                   Enroll Today — {course.price}
                 </AnimatedButton>
                 <span className="flex items-center gap-2 text-on-primary/70 text-sm italic">
@@ -103,7 +103,7 @@ export default async function CourseDetailPage({
           <div className="max-w-7xl mx-auto px-6">
             <div className="grid grid-cols-1 lg:grid-cols-12 gap-16 items-start">
               <div className="lg:col-span-4" data-gsap="slide-left">
-                <h2 className="font-[--font-cormorant] text-4xl font-bold text-primary mb-4 leading-tight">
+                <h2 className="font-montserrat text-2xl md:text-3xl font-bold text-primary mb-4 leading-tight">
                   Academic<br />Intent
                 </h2>
                 <div className="h-px w-16 bg-secondary" />
@@ -118,7 +118,7 @@ export default async function CourseDetailPage({
 
                 <div className="grid grid-cols-1 md:grid-cols-2 gap-8 pt-4">
                   <div>
-                    <h4 className="font-[--font-montserrat-var] font-bold text-primary mb-4">
+                    <h4 className="font-montserrat font-bold text-primary mb-4">
                       Syllabus Focus
                     </h4>
                     <ul className="space-y-3">
@@ -131,7 +131,7 @@ export default async function CourseDetailPage({
                     </ul>
                   </div>
                   <div>
-                    <h4 className="font-[--font-montserrat-var] font-bold text-primary mb-4">
+                    <h4 className="font-montserrat font-bold text-primary mb-4">
                       Learning Outcomes
                     </h4>
                     <ul className="space-y-3">
@@ -153,7 +153,7 @@ export default async function CourseDetailPage({
         <section className="py-24 bg-surface-container-lowest">
           <div className="max-w-7xl mx-auto px-6">
             <div className="mb-16 text-center" data-gsap="fade-up">
-              <h2 className="font-[--font-cormorant] text-4xl md:text-5xl font-bold text-primary mb-4">
+              <h2 className="font-montserrat text-2xl md:text-3xl font-bold text-primary mb-4">
                 Curriculum Framework
               </h2>
               <p className="text-on-surface-variant max-w-2xl mx-auto">
@@ -187,7 +187,7 @@ export default async function CourseDetailPage({
                         </span>
                       )}
                     </div>
-                    <h3 className="font-[--font-montserrat-var] font-bold text-lg text-primary mb-3">
+                    <h3 className="font-montserrat font-bold text-lg text-primary mb-3">
                       {mod.title}
                     </h3>
                     <p className="text-on-surface-variant text-sm leading-relaxed">
@@ -217,7 +217,7 @@ export default async function CourseDetailPage({
                 <span className="text-xs font-bold tracking-widest text-secondary uppercase mb-4">
                   Lead Faculty
                 </span>
-                <h2 className="font-[--font-cormorant] text-4xl font-bold text-primary mb-3">
+                <h2 className="font-montserrat text-2xl md:text-3xl font-bold text-primary mb-3">
                   {course.instructor.name}
                 </h2>
                 <p className="text-primary font-semibold text-sm mb-6">
@@ -246,7 +246,7 @@ export default async function CourseDetailPage({
               {course.features.map((f) => (
                 <div key={f.title} className="p-8 text-center flex flex-col items-center gap-4">
                   <span className="material-symbols-outlined text-4xl text-primary">{f.icon}</span>
-                  <h4 className="font-[--font-montserrat-var] font-bold text-primary">{f.title}</h4>
+                  <h4 className="font-montserrat font-bold text-primary">{f.title}</h4>
                   <p className="text-on-surface-variant text-sm leading-relaxed">{f.desc}</p>
                 </div>
               ))}
@@ -266,18 +266,18 @@ export default async function CourseDetailPage({
               <rect width="100%" height="100%" fill="url(#dots-cta)" />
             </svg>
           </div>
-          <div className="relative z-10 max-w-3xl mx-auto px-6" data-gsap="scale-in">
-            <h2 className="font-[--font-cormorant] text-4xl md:text-5xl font-bold mb-6">
+          <div className="relative z-10 max-w-2xl mx-auto px-6" data-gsap="scale-in">
+            <h2 className="font-montserrat text-2xl md:text-3xl font-bold mb-4 tracking-tight">
               Start Your Mastery Journey
             </h2>
-            <p className="text-on-primary/80 text-lg leading-relaxed mb-12">
+            <p className="font-inter text-on-primary/70 text-sm md:text-base leading-relaxed mb-8">
               Applications are reviewed on a rolling basis. Secure your seat in our next cohort and begin your transformation.
             </p>
-            <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <AnimatedButton href="/contact" variant="outline-light" size="lg">
+            <div className="flex flex-col sm:flex-row gap-3 justify-center">
+              <AnimatedButton href="/contact" variant="outline-light" size="md" className="w-full sm:flex-1">
                 Enroll in {course.title}
               </AnimatedButton>
-              <AnimatedButton href="/contact" variant="secondary" size="lg">
+              <AnimatedButton href="/contact" variant="secondary" size="md" className="w-full sm:flex-1">
                 Book a Consultation
               </AnimatedButton>
             </div>

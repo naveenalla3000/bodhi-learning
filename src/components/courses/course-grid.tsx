@@ -22,7 +22,7 @@ export default function CourseGrid() {
       {/* Header row */}
       <div className="flex flex-col sm:flex-row justify-between items-start sm:items-end gap-4 mb-8" data-gsap="fade-up">
         <div>
-          <h2 className="font-[--font-montserrat-var] font-bold text-3xl text-primary">All Courses</h2>
+          <h2 className="font-montserrat font-bold text-3xl text-primary">All Courses</h2>
           <p className="text-on-surface-variant mt-1">
             Discover {ALL_COURSES.length} high-impact programs for your career.
           </p>
@@ -72,7 +72,7 @@ export default function CourseGrid() {
                 </span>
               </div>
 
-              <h3 className="font-[--font-montserrat-var] font-bold text-xl text-primary group-hover:text-secondary transition-colors">
+              <h3 className="font-montserrat font-bold text-xl text-primary group-hover:text-secondary transition-colors">
                 {course.title}
               </h3>
               <p className="text-on-surface-variant text-sm leading-relaxed line-clamp-2">

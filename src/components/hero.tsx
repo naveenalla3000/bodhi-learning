@@ -79,14 +79,14 @@ export default function Hero() {
           landscape.
         </p>
 
-        <div className="flex justify-center gap-6 flex-wrap">
+        <div className="flex flex-row justify-center gap-4 flex-wrap">
           <span className="hero-btn">
-            <AnimatedButton href="/programs" variant="primary" size="lg">
+            <AnimatedButton href="/programs" variant="primary" size="md">
               Explore Our Programs
             </AnimatedButton>
           </span>
           <span className="hero-btn">
-            <AnimatedButton href="/contact" variant="outline-dark" size="lg">
+            <AnimatedButton href="/contact" variant="outline-dark" size="md">
               Talk To Us
             </AnimatedButton>
           </span>

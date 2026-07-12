@@ -58,7 +58,7 @@ export default function ImpactNumbers() {
             <div
               key={s.label}
               className={`stat-block text-center flex flex-col gap-1 ${
-                i < stats.length - 1 ? "border-r border-white/10" : ""
+                i < stats.length - 1 ? "md:border-r md:border-white/10" : ""
               }`}
             >
               <span
