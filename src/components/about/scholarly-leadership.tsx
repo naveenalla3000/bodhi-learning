@@ -24,7 +24,7 @@ const faculty = [
 export default function ScholarlyLeadership() {
   return (
     <section className="py-20 max-w-7xl mx-auto px-16">
-      <div className="flex flex-col md:flex-row justify-between items-end mb-16 gap-8">
+      <div className="flex flex-col md:flex-row justify-between items-end mb-16 gap-8" data-gsap="fade-up">
         <div className="max-w-2xl">
           <h2 className="font-montserrat font-semibold text-3xl text-primary mb-4">
             Scholarly Leadership
@@ -39,9 +39,9 @@ export default function ScholarlyLeadership() {
         </button>
       </div>
 
-      <div className="grid grid-cols-1 md:grid-cols-3 gap-12">
+      <div className="grid grid-cols-1 md:grid-cols-3 gap-12" data-gsap="stagger">
         {faculty.map((f) => (
-          <div key={f.name} className="group">
+          <div key={f.name} className="group" data-gsap-item>
             <div className="aspect-[3/4] overflow-hidden rounded-2xl mb-6 bg-surface-dim relative">
               <Image
                 src={f.img}

@@ -8,7 +8,7 @@ export default function OurNarrative() {
     <section className="py-20 max-w-7xl mx-auto px-16">
       <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
         {/* Left — text */}
-        <div className="space-y-8">
+        <div className="space-y-8" data-gsap="slide-left">
           <div>
             <h2 className="font-montserrat font-semibold text-3xl text-primary mb-4">
               Our Narrative
@@ -58,7 +58,7 @@ export default function OurNarrative() {
         </div>
 
         {/* Right — image + floating stat */}
-        <div className="relative">
+        <div className="relative" data-gsap="slide-right">
           <div className="relative aspect-[4/5] w-full overflow-hidden rounded-2xl shadow-2xl">
             <Image
               src={narrativeImg}

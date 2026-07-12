@@ -43,7 +43,7 @@ export default function Testimonials() {
       <div className="max-w-7xl mx-auto px-6 relative z-10">
         <div className="grid grid-cols-1 md:grid-cols-12 gap-16 items-center">
           {/* Left column */}
-          <div className="md:col-span-5">
+          <div className="md:col-span-5" data-gsap="slide-left">
             <div className="flex items-center gap-4 mb-6">
               <div className="w-12 h-px bg-secondary" />
               <span className="text-secondary font-semibold tracking-[0.3em] uppercase text-xs">
@@ -61,7 +61,7 @@ export default function Testimonials() {
           </div>
 
           {/* Right column — slider */}
-          <div className="md:col-span-7 relative">
+          <div className="md:col-span-7 relative" data-gsap="slide-right">
             {/* Ghost quote mark */}
             <div className="absolute -top-20 -left-10 text-[200px] font-bold text-primary/5 select-none pointer-events-none leading-none">
               &ldquo;

@@ -1,7 +1,7 @@
 export default function AboutCta() {
   return (
     <section className="py-20 bg-surface-container text-center">
-      <div className="max-w-2xl mx-auto px-16">
+      <div className="max-w-2xl mx-auto px-16" data-gsap="scale-in">
         <h2 className="font-montserrat font-semibold text-3xl text-primary mb-6">
           Begin your path to mastery
         </h2>

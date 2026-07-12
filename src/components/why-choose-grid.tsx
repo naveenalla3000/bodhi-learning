@@ -10,17 +10,17 @@ export default function WhyChooseGrid() {
   return (
     <section className="py-20 bg-surface-container-low">
       <div className="max-w-7xl mx-auto px-6">
-        <div className="text-center mb-16">
+        <div className="text-center mb-16" data-gsap="fade-up">
           <h2 className="font-montserrat font-semibold text-3xl text-primary mb-2">
             Why Choose BODHI Learning?
           </h2>
           <p className="text-on-surface-variant font-medium tracking-wide uppercase text-sm">
             Key Benefits of Learning With Us
           </p>
-          <div className="w-24 h-1 bg-secondary mx-auto mt-6 rounded-full" />
+          <div className="w-24 h-1 bg-secondary mx-auto mt-6 rounded-full" data-gsap="line" />
         </div>
 
-        <div className="grid grid-cols-1 md:grid-cols-12 gap-6">
+        <div className="grid grid-cols-1 md:grid-cols-12 gap-6" data-gsap="stagger">
           {/* Benefit 1 — text only */}
           <div className="md:col-span-4 bg-surface-container-lowest p-8 rounded-xl border border-surface-container-high flex flex-col gap-6 hover:shadow-lg transition-all">
             <div className="w-14 h-14 bg-primary/5 rounded-full flex items-center justify-center">

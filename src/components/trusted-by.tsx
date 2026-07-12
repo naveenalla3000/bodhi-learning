@@ -51,11 +51,11 @@ export default function TrustedBy() {
   return (
     <section className="py-20 bg-surface">
       <div className="max-w-7xl mx-auto px-6 overflow-hidden">
-        <div className="text-center mb-16">
+        <div className="text-center mb-16" data-gsap="fade-up">
           <h2 className="font-montserrat font-semibold text-3xl text-primary mb-2 uppercase tracking-tight">
             Trusted By Leading Institutions
           </h2>
-          <div className="w-24 h-1 bg-secondary mx-auto mt-6 rounded-full" />
+          <div className="w-24 h-1 bg-secondary mx-auto mt-6 rounded-full" data-gsap="line" />
         </div>
 
         <div className="relative flex overflow-x-hidden group">

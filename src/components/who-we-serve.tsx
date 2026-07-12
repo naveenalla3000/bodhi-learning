@@ -15,7 +15,7 @@ export default function WhoWeServe() {
       <div className="max-w-7xl mx-auto px-6">
         {/* Header */}
         <div className="flex flex-col md:flex-row justify-between items-end mb-20 gap-8">
-          <div className="max-w-2xl">
+          <div className="max-w-2xl" data-gsap="slide-left">
             <div className="flex items-center gap-4 mb-6">
               <div className="w-12 h-px bg-secondary" />
               <span className="text-secondary font-semibold tracking-[0.3em] uppercase text-xs">
@@ -26,15 +26,15 @@ export default function WhoWeServe() {
               Who We <span className="italic font-medium">Serve</span>
             </h2>
           </div>
-          <p className="font-inter text-lg text-on-surface-variant max-w-md opacity-80 leading-relaxed">
+          <p className="font-inter text-lg text-on-surface-variant max-w-md opacity-80 leading-relaxed" data-gsap="slide-right">
             Empowering diverse learners through specialized programs tailored
             for every stage of professional and academic growth.
           </p>
         </div>
 
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-8" data-gsap="stagger">
           {/* K-12 Students — spans 2 */}
-          <div className="md:col-span-2 group relative overflow-hidden rounded-xl bg-surface-container-lowest border border-surface-container-high hover:shadow-2xl transition-all duration-500">
+          <div data-gsap-item className="md:col-span-2 group relative overflow-hidden rounded-xl bg-surface-container-lowest border border-surface-container-high hover:shadow-2xl transition-all duration-500">
             <div className="flex flex-col md:flex-row h-full">
               <div className="md:w-3/5 relative overflow-hidden h-64 md:h-auto">
                 <Image
@@ -69,7 +69,7 @@ export default function WhoWeServe() {
           </div>
 
           {/* Teacher Training */}
-          <div className="md:col-span-1 group relative overflow-hidden rounded-xl bg-surface-container-lowest border border-surface-container-high hover:shadow-2xl transition-all duration-500">
+          <div data-gsap-item className="md:col-span-1 group relative overflow-hidden rounded-xl bg-surface-container-lowest border border-surface-container-high hover:shadow-2xl transition-all duration-500">
             <div className="h-64 relative overflow-hidden">
               <Image
                 src={imgTeachers}
@@ -102,7 +102,7 @@ export default function WhoWeServe() {
           </div>
 
           {/* Corporate Skills */}
-          <div className="md:col-span-1 group relative overflow-hidden rounded-xl bg-surface-container-lowest border border-surface-container-high hover:shadow-2xl transition-all duration-500">
+          <div data-gsap-item className="md:col-span-1 group relative overflow-hidden rounded-xl bg-surface-container-lowest border border-surface-container-high hover:shadow-2xl transition-all duration-500">
             <div className="h-64 relative overflow-hidden">
               <Image
                 src={imgCorporate}
@@ -135,7 +135,7 @@ export default function WhoWeServe() {
           </div>
 
           {/* Women Empowerment — spans 2 */}
-          <div className="md:col-span-2 group relative overflow-hidden rounded-xl bg-surface-container-lowest border border-surface-container-high hover:shadow-2xl transition-all duration-500">
+          <div data-gsap-item className="md:col-span-2 group relative overflow-hidden rounded-xl bg-surface-container-lowest border border-surface-container-high hover:shadow-2xl transition-all duration-500">
             <div className="flex flex-col md:flex-row h-full">
               <div className="md:w-3/5 relative overflow-hidden h-64 md:h-auto">
                 <Image

@@ -27,7 +27,7 @@ export default function BodhiMethod() {
   return (
     <section className="py-20 bg-surface-bright relative overflow-hidden">
       <div className="max-w-7xl mx-auto px-6 relative z-10">
-        <div className="text-center max-w-3xl mx-auto mb-20">
+        <div className="text-center max-w-3xl mx-auto mb-20" data-gsap="fade-up">
           <span className="text-secondary font-semibold tracking-[0.2em] uppercase text-xs mb-4 block">
             Our Methodology
           </span>
@@ -40,13 +40,14 @@ export default function BodhiMethod() {
           </p>
         </div>
 
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-12 relative">
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-12 relative" data-gsap="stagger">
           {/* Connector line */}
           <div className="hidden md:block absolute top-1/2 left-0 w-full h-px bg-gradient-to-r from-transparent via-outline-variant to-transparent -translate-y-1/2 z-0" />
 
           {steps.map((step) => (
             <div
               key={step.num}
+              data-gsap-item
               className="group relative bg-surface-container-lowest p-10 rounded-3xl border border-surface-container-high hover:border-secondary/30 transition-all duration-500 hover:-translate-y-2 hover:shadow-2xl z-10"
             >
               {/* Ghost number */}

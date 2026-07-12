@@ -28,14 +28,14 @@ export default function CoreFocus() {
   return (
     <section className="py-20 bg-surface-container-lowest">
       <div className="max-w-7xl mx-auto px-6">
-        <div className="text-center mb-12">
+        <div className="text-center mb-12" data-gsap="fade-up">
           <h2 className="font-montserrat font-semibold text-3xl text-primary mb-3">
             Core Focus Areas
           </h2>
-          <div className="w-20 h-1 bg-secondary mx-auto rounded-full" />
+          <div className="w-20 h-1 bg-secondary mx-auto rounded-full" data-gsap="line" />
         </div>
 
-        <div className="grid grid-cols-1 md:grid-cols-12 gap-6">
+        <div className="grid grid-cols-1 md:grid-cols-12 gap-6" data-gsap="stagger">
           {/* English Mastery */}
           <div
             className="md:col-span-6 bg-surface-container-low rounded-xl p-12 flex flex-col justify-between hover:bg-surface-container transition-all"

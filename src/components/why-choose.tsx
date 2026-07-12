@@ -32,7 +32,7 @@ export default function WhyChoose() {
   return (
     <section className="py-20 bg-surface">
       <div className="max-w-7xl mx-auto px-6">
-        <div className="text-center max-w-2xl mx-auto mb-16">
+        <div className="text-center max-w-2xl mx-auto mb-16" data-gsap="fade-up">
           <h2 className="font-montserrat font-semibold text-3xl text-primary mb-6">
             Why Choose BODHI LEARNING?
           </h2>
@@ -44,7 +44,7 @@ export default function WhyChoose() {
         </div>
 
         {/* Feature Cards */}
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mb-20">
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mb-20" data-gsap="stagger">
           {features.map((f) => (
             <div
               key={f.title}
@@ -66,9 +66,9 @@ export default function WhyChoose() {
         </div>
 
         {/* Dark Stats Block */}
-        <div className="bg-gradient-to-br from-primary via-[#0d4a2a] to-[#1a6040] rounded-3xl p-10 md:p-16 text-white rounded-tr-[64px] rounded-bl-[64px]">
+        <div className="bg-gradient-to-br from-primary via-[#0d4a2a] to-[#1a6040] rounded-3xl p-10 md:p-16 text-white rounded-tr-[64px] rounded-bl-[64px]" data-gsap="scale-in">
           <div className="grid grid-cols-1 md:grid-cols-2 gap-12 items-center mb-16">
-            <div className="relative h-[400px] md:h-[500px]">
+            <div className="relative h-[400px] md:h-[500px]" data-gsap="clip-reveal">
               <Image
                 src={graduatesImage}
                 alt="Graduates"
@@ -77,7 +77,7 @@ export default function WhyChoose() {
                 sizes="(max-width: 768px) 100vw, 50vw"
               />
             </div>
-            <div className="flex flex-col gap-6">
+            <div className="flex flex-col gap-6" data-gsap="slide-right">
               <h3 className="font-montserrat font-bold text-4xl md:text-5xl text-white">
                 Shaping the Future of Education
               </h3>

@@ -21,7 +21,7 @@ export default function Milestones() {
   return (
     <section className="bg-surface-container-low py-20">
       <div className="max-w-7xl mx-auto px-6 md:px-16">
-        <div className="mb-12">
+        <div className="mb-12" data-gsap="fade-up">
           <h2 className="font-montserrat font-semibold text-3xl text-primary">
             Evolutionary Milestones
           </h2>
@@ -30,7 +30,7 @@ export default function Milestones() {
           </p>
         </div>
 
-        <div className="space-y-4">
+        <div className="space-y-4" data-gsap="stagger">
           {milestones.map((m) => (
             <div
               key={m.year}

@@ -1,38 +1,102 @@
+"use client";
+
+import { useEffect, useRef } from "react";
+import gsap from "gsap";
+
 export default function Hero() {
+  const sectionRef = useRef<HTMLElement>(null);
+
+  useEffect(() => {
+    const ctx = gsap.context(() => {
+      const tl = gsap.timeline({ defaults: { ease: "power4.out" } });
+
+      tl.fromTo(
+        ".hero-badge",
+        { opacity: 0, y: 24, scale: 0.88 },
+        { opacity: 1, y: 0, scale: 1, duration: 0.9 }
+      )
+        .fromTo(
+          ".hero-word",
+          { opacity: 0, y: 72, filter: "blur(8px)" },
+          { opacity: 1, y: 0, filter: "blur(0px)", duration: 1.1, stagger: 0.07 },
+          "-=0.4"
+        )
+        .fromTo(
+          ".hero-sub",
+          { opacity: 0, y: 36, filter: "blur(4px)" },
+          { opacity: 1, y: 0, filter: "blur(0px)", duration: 1 },
+          "-=0.6"
+        )
+        .fromTo(
+          ".hero-btn",
+          { opacity: 0, y: 28, scale: 0.92 },
+          { opacity: 1, y: 0, scale: 1, duration: 0.8, stagger: 0.16 },
+          "-=0.6"
+        );
+
+      // Organic floating blobs
+      gsap.to(".hero-blob-1", {
+        y: -40, x: 24, duration: 7, ease: "sine.inOut", yoyo: true, repeat: -1,
+      });
+      gsap.to(".hero-blob-2", {
+        y: 32, x: -18, duration: 9, ease: "sine.inOut", yoyo: true, repeat: -1, delay: 1.5,
+      });
+      gsap.to(".hero-blob-3", {
+        y: -20, x: -30, duration: 11, ease: "sine.inOut", yoyo: true, repeat: -1, delay: 0.8,
+      });
+    }, sectionRef);
+
+    return () => ctx.revert();
+  }, []);
+
+  const mainWords = ["Empowering", "Your", "Future", "Through"];
+  const accentWords = ["Strategic", "Mastery"];
+
   return (
-    <section className="relative overflow-hidden pt-48 pb-48">
-      <div className="max-w-7xl mx-auto px-6 text-center">
-        <span className="inline-block px-4 py-1 rounded-full bg-surface-container-high text-primary font-semibold text-xs mb-8 uppercase tracking-widest">
+    <section ref={sectionRef} className="relative overflow-hidden pt-44 pb-48">
+      <div className="max-w-7xl mx-auto px-6 text-center relative z-10">
+        <span className="hero-badge inline-block px-5 py-1.5 rounded-full bg-surface-container-high text-primary font-semibold text-xs mb-10 uppercase tracking-widest">
           Awakening Human Potential
         </span>
 
-        <h1 className="font-montserrat font-bold text-5xl text-primary max-w-4xl mx-auto mb-8 leading-tight tracking-tight">
-          Empowering Your Future Through{" "}
-          <span className="text-secondary italic">Strategic Mastery</span>
+        <h1 className="font-montserrat font-bold text-5xl md:text-6xl text-primary max-w-4xl mx-auto mb-8 leading-tight tracking-tight">
+          {mainWords.map((word) => (
+            <span key={word} className="hero-word inline-block mr-[0.28em] last:mr-0">
+              {word}
+            </span>
+          ))}{" "}
+          {accentWords.map((word) => (
+            <span key={word} className="hero-word inline-block text-secondary italic mr-[0.28em] last:mr-0">
+              {word}
+            </span>
+          ))}
         </h1>
 
-        <p className="font-inter text-lg text-on-surface-variant max-w-2xl mx-auto mb-12 leading-relaxed">
+        <p className="hero-sub font-inter text-lg text-on-surface-variant max-w-2xl mx-auto mb-14 leading-relaxed">
           Join a global community of thinkers. Bodhi Learning provides the rigor
           and professional training needed to excel in today&apos;s competitive
           landscape.
         </p>
 
         <div className="flex justify-center gap-6 flex-wrap">
-          <button className="bg-primary text-on-primary font-bold px-10 py-5 rounded-full hover:shadow-2xl transition-all transform hover:-translate-y-1">
+          <button className="hero-btn bg-primary text-on-primary font-bold px-10 py-5 rounded-full hover:shadow-2xl hover:shadow-primary/20 transition-all duration-300 hover:-translate-y-1">
             Explore Our Programs
           </button>
-          <button className="border-2 border-primary text-primary font-bold px-10 py-5 rounded-full hover:bg-surface-container-low transition-all">
+          <button className="hero-btn border-2 border-primary text-primary font-bold px-10 py-5 rounded-full hover:bg-surface-container-low transition-all duration-300">
             Talk To Us
           </button>
         </div>
       </div>
 
       {/* Decorative blobs */}
-      <div className="absolute top-1/2 left-0 -translate-y-1/2 opacity-20 pointer-events-none">
-        <div className="w-96 h-96 bg-secondary rounded-full blur-3xl" />
+      <div className="hero-blob-1 absolute top-1/3 -left-16 opacity-25 pointer-events-none">
+        <div className="w-[480px] h-[480px] bg-secondary rounded-full blur-3xl" />
       </div>
-      <div className="absolute bottom-0 right-10 opacity-10 pointer-events-none">
-        <div className="w-64 h-64 bg-primary rounded-full blur-2xl" />
+      <div className="hero-blob-2 absolute -bottom-16 right-0 opacity-10 pointer-events-none">
+        <div className="w-[360px] h-[360px] bg-primary rounded-full blur-2xl" />
+      </div>
+      <div className="hero-blob-3 absolute top-0 right-1/4 opacity-10 pointer-events-none">
+        <div className="w-[200px] h-[200px] bg-secondary rounded-full blur-2xl" />
       </div>
     </section>
   );

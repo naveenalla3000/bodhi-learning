@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import { Montserrat, Inter, Cormorant_Garamond } from "next/font/google";
 import "./globals.css";
 import WhatsAppButton from "@/components/whatsapp-button";
+import ScrollAnimations from "@/components/scroll-animations";
 
 const montserrat = Montserrat({
   subsets: ["latin"],
@@ -47,6 +48,7 @@ export default function RootLayout({
       <body className="bg-surface text-on-surface antialiased">
         {children}
         <WhatsAppButton />
+        <ScrollAnimations />
       </body>
     </html>
   );
