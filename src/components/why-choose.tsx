@@ -66,8 +66,68 @@ export default function WhyChoose() {
         </div>
 
         {/* Dark Stats Block */}
-        <div className="bg-gradient-to-br from-primary via-[#0d4a2a] to-[#1a6040] rounded-3xl p-10 md:p-16 text-white rounded-tr-[64px] rounded-bl-[64px]" data-gsap="scale-in">
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-12 items-center mb-16">
+        <div className="relative bg-gradient-to-br from-primary via-[#0d4a2a] to-[#1a6040] rounded-3xl p-10 md:p-16 text-white rounded-tr-[64px] rounded-bl-[64px] overflow-hidden" data-gsap="scale-in">
+
+          {/* Dot-grid texture */}
+          <div
+            className="absolute inset-0 opacity-[0.06] pointer-events-none"
+            style={{
+              backgroundImage:
+                "radial-gradient(circle at 1.5px 1.5px, rgba(255,255,255,0.7) 1.5px, transparent 0)",
+              backgroundSize: "28px 28px",
+            }}
+          />
+
+          {/* Concentric rings — top-right corner */}
+          <svg
+            className="absolute -top-24 -right-24 opacity-[0.09] pointer-events-none"
+            width="420"
+            height="420"
+            viewBox="0 0 420 420"
+            fill="none"
+            aria-hidden
+          >
+            <circle cx="210" cy="210" r="80"  stroke="white" strokeWidth="1.5" />
+            <circle cx="210" cy="210" r="130" stroke="white" strokeWidth="1" />
+            <circle cx="210" cy="210" r="180" stroke="white" strokeWidth="0.75" />
+            <circle cx="210" cy="210" r="210" stroke="white" strokeWidth="0.5" />
+          </svg>
+
+          {/* Concentric rings — bottom-left corner */}
+          <svg
+            className="absolute -bottom-24 -left-24 opacity-[0.07] pointer-events-none"
+            width="360"
+            height="360"
+            viewBox="0 0 360 360"
+            fill="none"
+            aria-hidden
+          >
+            <circle cx="180" cy="180" r="70"  stroke="white" strokeWidth="1.5" />
+            <circle cx="180" cy="180" r="120" stroke="white" strokeWidth="1" />
+            <circle cx="180" cy="180" r="170" stroke="white" strokeWidth="0.6" />
+          </svg>
+
+          {/* Diagonal ruled lines */}
+          <svg
+            className="absolute inset-0 w-full h-full opacity-[0.04] pointer-events-none"
+            preserveAspectRatio="none"
+            aria-hidden
+          >
+            {[0, 80, 160, 240, 320, 400, 480, 560, 640, 720].map((x) => (
+              <line
+                key={x}
+                x1={x} y1="0"
+                x2={x - 300} y2="600"
+                stroke="white"
+                strokeWidth="1"
+              />
+            ))}
+          </svg>
+
+          {/* Soft amber glow — matches secondary brand colour */}
+          <div className="absolute top-1/2 right-0 -translate-y-1/2 w-80 h-80 bg-secondary/20 rounded-full blur-3xl pointer-events-none" />
+
+          <div className="relative z-10 grid grid-cols-1 md:grid-cols-2 gap-12 items-center mb-16">
             <div className="relative h-[400px] md:h-[500px]" data-gsap="clip-reveal">
               <Image
                 src={graduatesImage}
@@ -90,7 +150,7 @@ export default function WhyChoose() {
             </div>
           </div>
 
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-12 border-t border-white/10 pt-12">
+          <div className="relative z-10 grid grid-cols-1 md:grid-cols-2 gap-12 border-t border-white/10 pt-12">
             {stats.map((s) => (
               <div key={s.label} className="flex flex-col gap-2">
                 <div className="flex flex-col items-baseline">
