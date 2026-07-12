@@ -1,9 +1,11 @@
 "use client";
 
-import { useEffect, useState } from "react";
+import { useEffect, useRef, useState } from "react";
 import Image from "next/image";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
+import gsap from "gsap";
+import { ScrollTrigger } from "gsap/ScrollTrigger";
 
 const navLinks = [
   { label: "Home", href: "/" },
@@ -27,14 +29,81 @@ const mobileLinks = [
 ];
 
 export default function Nav() {
-  const [scrolled, setScrolled] = useState(false);
+  const wrapperRef = useRef<HTMLDivElement>(null);
+  const navRef = useRef<HTMLElement>(null);
   const [mobileOpen, setMobileOpen] = useState(false);
   const pathname = usePathname();
 
   useEffect(() => {
-    const onScroll = () => setScrolled(window.scrollY > 20);
-    window.addEventListener("scroll", onScroll, { passive: true });
-    return () => window.removeEventListener("scroll", onScroll);
+    gsap.registerPlugin(ScrollTrigger);
+
+    const wrapper = wrapperRef.current;
+    const nav = navRef.current;
+    if (!wrapper || !nav) return;
+
+    // ── Floating state (at top) ──────────────────────────────
+    gsap.set(wrapper, {
+      left: "50%",
+      xPercent: -50,
+      width: "80%",
+      top: 16,
+      right: "auto",
+    });
+    gsap.set(nav, {
+      borderRadius: "16px",
+      paddingTop: "16px",
+      paddingBottom: "16px",
+      backgroundColor: "rgba(255,255,255,0.75)",
+      boxShadow: "0 4px 24px rgba(12,59,32,0.08)",
+    });
+
+    // ── GSAP ScrollTrigger — expand on scroll, shrink on return ─
+    ScrollTrigger.create({
+      trigger: document.documentElement,
+      start: "top top-=64",
+      onEnter: () => {
+        // Expand to full width
+        gsap.to(wrapper, {
+          left: 0,
+          xPercent: 0,
+          width: "100%",
+          top: 0,
+          duration: 0.7,
+          ease: "power3.inOut",
+        });
+        gsap.to(nav, {
+          borderRadius: 0,
+          paddingTop: "12px",
+          paddingBottom: "12px",
+          backgroundColor: "rgba(255,255,255,0.95)",
+          boxShadow: "0 8px 32px rgba(12,59,32,0.14)",
+          duration: 0.7,
+          ease: "power3.inOut",
+        });
+      },
+      onLeaveBack: () => {
+        // Shrink back to floating 80%
+        gsap.to(wrapper, {
+          left: "50%",
+          xPercent: -50,
+          width: "80%",
+          top: 16,
+          duration: 0.7,
+          ease: "power3.inOut",
+        });
+        gsap.to(nav, {
+          borderRadius: "16px",
+          paddingTop: "16px",
+          paddingBottom: "16px",
+          backgroundColor: "rgba(255,255,255,0.75)",
+          boxShadow: "0 4px 24px rgba(12,59,32,0.08)",
+          duration: 0.7,
+          ease: "power3.inOut",
+        });
+      },
+    });
+
+    return () => ScrollTrigger.getAll().forEach((t) => t.kill());
   }, []);
 
   const NavLink = ({ label, href }: { label: string; href: string }) => {
@@ -57,13 +126,22 @@ export default function Nav() {
   };
 
   return (
-    <div className="fixed top-0 left-0 right-0 z-50 px-4 md:px-8 pt-4">
+    /* Wrapper: GSAP owns left / width / top — SSR inline style matches initial GSAP state */
+    <div
+      ref={wrapperRef}
+      className="fixed z-50"
+      style={{ left: "50%", transform: "translateX(-50%)", width: "80%", top: "16px" }}
+    >
       <nav
-        className={`transition-all duration-500 backdrop-blur-2xl border border-white/30 rounded-2xl overflow-visible ${
-          scrolled
-            ? "bg-white/90 shadow-[0_8px_32px_rgba(12,59,32,0.12)] py-3"
-            : "bg-white/75 shadow-[0_4px_24px_rgba(12,59,32,0.08)] py-4"
-        }`}
+        ref={navRef}
+        className="backdrop-blur-2xl border border-white/30 overflow-visible"
+        style={{
+          borderRadius: "16px",
+          paddingTop: "16px",
+          paddingBottom: "16px",
+          backgroundColor: "rgba(255,255,255,0.75)",
+          boxShadow: "0 4px 24px rgba(12,59,32,0.08)",
+        }}
       >
         <div className="flex justify-between items-center px-5 md:px-8 max-w-7xl mx-auto">
           {/* Logo */}
@@ -74,7 +152,7 @@ export default function Nav() {
             </span>
           </Link>
 
-          {/* Desktop Nav Links: Home · About · Courses · Programs ▾ · Contact */}
+          {/* Desktop Nav Links */}
           <div className="hidden md:flex items-center gap-8">
             {navLinks.map(({ label, href }) => (
               <NavLink key={href} label={label} href={href} />
