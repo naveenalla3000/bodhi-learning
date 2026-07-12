@@ -37,18 +37,10 @@ export default function Nav() {
   useEffect(() => {
     gsap.registerPlugin(ScrollTrigger);
 
-    const wrapper = wrapperRef.current;
     const nav = navRef.current;
-    if (!wrapper || !nav) return;
+    if (!nav) return;
 
-    // ── Floating state (at top) ──────────────────────────────
-    gsap.set(wrapper, {
-      left: "50%",
-      xPercent: -50,
-      width: "80%",
-      top: 16,
-      right: "auto",
-    });
+    // ── Always floating — subtle tighten on scroll ───────────
     gsap.set(nav, {
       borderRadius: "16px",
       paddingTop: "16px",
@@ -57,48 +49,27 @@ export default function Nav() {
       boxShadow: "0 4px 24px rgba(12,59,32,0.08)",
     });
 
-    // ── GSAP ScrollTrigger — expand on scroll, shrink on return ─
     ScrollTrigger.create({
       trigger: document.documentElement,
       start: "top top-=64",
       onEnter: () => {
-        // Expand to full width
-        gsap.to(wrapper, {
-          left: 0,
-          xPercent: 0,
-          width: "100%",
-          top: 0,
-          duration: 0.7,
-          ease: "power3.inOut",
-        });
         gsap.to(nav, {
-          borderRadius: 0,
-          paddingTop: "12px",
-          paddingBottom: "12px",
+          paddingTop: "10px",
+          paddingBottom: "10px",
           backgroundColor: "rgba(255,255,255,0.95)",
-          boxShadow: "0 8px 32px rgba(12,59,32,0.14)",
-          duration: 0.7,
-          ease: "power3.inOut",
+          boxShadow: "0 8px 40px rgba(12,59,32,0.14)",
+          duration: 0.5,
+          ease: "power3.out",
         });
       },
       onLeaveBack: () => {
-        // Shrink back to floating 80%
-        gsap.to(wrapper, {
-          left: "50%",
-          xPercent: -50,
-          width: "80%",
-          top: 16,
-          duration: 0.7,
-          ease: "power3.inOut",
-        });
         gsap.to(nav, {
-          borderRadius: "16px",
           paddingTop: "16px",
           paddingBottom: "16px",
           backgroundColor: "rgba(255,255,255,0.75)",
           boxShadow: "0 4px 24px rgba(12,59,32,0.08)",
-          duration: 0.7,
-          ease: "power3.inOut",
+          duration: 0.5,
+          ease: "power3.out",
         });
       },
     });
