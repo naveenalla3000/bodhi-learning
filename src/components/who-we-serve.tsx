@@ -27,8 +27,7 @@ export default function WhoWeServe() {
             </h2>
           </div>
           <p className="font-inter text-lg text-on-surface-variant max-w-md opacity-80 leading-relaxed" data-gsap="slide-right">
-            Empowering diverse learners through specialized programs tailored
-            for every stage of professional and academic growth.
+            Wherever you&apos;re starting, we&apos;ve already built the path.
           </p>
         </div>
 
@@ -54,8 +53,7 @@ export default function WhoWeServe() {
                   K-12 Excellence
                 </h3>
                 <p className="text-on-surface-variant text-base mb-8 leading-relaxed opacity-80">
-                  Developing the language proficiency and critical thinking
-                  skills essential for academic success.
+                  The critical thinking edge that gets kids ahead — and keeps them there.
                 </p>
                 <a
                   href="#"
@@ -88,8 +86,7 @@ export default function WhoWeServe() {
                 EDUCATE THE EDUCATORS
               </h3>
               <p className="text-on-surface-variant text-base mb-8 leading-relaxed opacity-80">
-                Professional development workshops that equip educators with
-                innovative pedagogical strategies.
+                Give your teachers tools your competitors&apos; schools don&apos;t have.
               </p>
               <a
                 href="#"
@@ -121,8 +118,7 @@ export default function WhoWeServe() {
                 PROFESSIONAL UPSKILLING
               </h3>
               <p className="text-on-surface-variant text-base mb-8 leading-relaxed opacity-80">
-                Strategic communication and soft skills training for
-                professionals in a globalized economy.
+                Communication training that shows up in your next quarter&apos;s numbers.
               </p>
               <a
                 href="#"
@@ -155,8 +151,7 @@ export default function WhoWeServe() {
                   LEAD, LEARN &amp; THRIVE
                 </h3>
                 <p className="text-on-surface-variant text-base mb-8 leading-relaxed opacity-80">
-                  Skill development programs designed to build confidence and
-                  leadership for women&apos;s advancement.
+                  Confidence and leadership built to last a career, not a workshop.
                 </p>
                 <a
                   href="#"

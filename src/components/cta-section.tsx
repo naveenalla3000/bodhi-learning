@@ -109,10 +109,10 @@ export default function CtaSection() {
           START YOUR JOURNEY
         </span>
         <h2 className="font-montserrat font-bold text-2xl md:text-4xl mb-8 tracking-tight">
-          Ready to Awaken Your Potential?
+          12,000+ learners already chose to grow. Your turn.
         </h2>
         <p className="font-inter text-lg md:text-xl text-on-primary/80 max-w-2xl mx-auto mb-12 leading-relaxed">
-          Join 12,000+ learners who chose to grow with Bodhi Learning.
+          Book a free consultation — no pitch, no pressure, just a real conversation about where you want to go.
         </p>
         <div className="flex justify-center">
           <AnimatedButton href="/contact" variant="secondary" size="lg">

@@ -50,8 +50,8 @@ export default function Hero() {
     return () => ctx.revert();
   }, []);
 
-  const mainWords = ["Empowering", "Your", "Future", "Through"];
-  const accentWords = ["Strategic", "Mastery"];
+  const mainWords = ["Stop", "Preparing."];
+  const accentWords = ["Start", "Winning."];
 
   return (
     <section ref={sectionRef} className="relative overflow-hidden pt-44 pb-48">
@@ -74,15 +74,13 @@ export default function Hero() {
         </h1>
 
         <p className="hero-sub font-inter text-lg text-on-surface-variant max-w-2xl mx-auto mb-14 leading-relaxed">
-          Join a global community of thinkers. Bodhi Learning provides the rigor
-          and professional training needed to excel in today&apos;s competitive
-          landscape.
+          You don&apos;t need another course. You need an edge. Bodhi trains 25,000+ learners and 19,000+ educators to think sharper, speak stronger, and lead louder — starting now.
         </p>
 
         <div className="flex flex-row justify-center gap-4 flex-wrap">
           <span className="hero-btn">
             <AnimatedButton href="/programs" variant="primary" size="md">
-              Explore Our Programs
+              See What&apos;s Possible
             </AnimatedButton>
           </span>
           <span className="hero-btn">

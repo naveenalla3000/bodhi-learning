@@ -3,14 +3,14 @@ const steps = [
     num: "01",
     icon: "analytics",
     title: "Assess",
-    desc: "We begin with a deep diagnostic of your current skills and professional goals to create a personalized learning roadmap.",
+    desc: "We find exactly where you're stuck. A sharp diagnostic, not a generic quiz.",
     accent: "bg-primary/5 group-hover:bg-primary group-hover:text-on-primary",
   },
   {
     num: "02",
     icon: "menu_book",
     title: "Learn",
-    desc: "Engage with our world-class curriculum and expert mentors through immersive, high-impact training sessions.",
+    desc: "You train with the best, not just watch a screen. High-impact sessions built around you.",
     accent:
       "bg-secondary/10 group-hover:bg-secondary group-hover:text-on-secondary",
   },
@@ -18,7 +18,7 @@ const steps = [
     num: "03",
     icon: "rocket_launch",
     title: "Apply",
-    desc: "Translate knowledge into action with real-world projects and professional integration support for immediate impact.",
+    desc: "You leave with results, not notes. Real projects. Real proof you've leveled up.",
     accent: "bg-primary/5 group-hover:bg-primary group-hover:text-on-primary",
   },
 ];

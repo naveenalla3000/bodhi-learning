@@ -4,17 +4,17 @@ const features = [
   {
     icon: "groups",
     title: "Expert Trainers",
-    desc: "Learn from industry veterans and PhD-level educators with global experience and deep pedagogical expertise.",
+    desc: "Learn from people who've actually done it. PhD-level educators and industry veterans, not textbook readers.",
   },
   {
     icon: "update",
     title: "Flexible Learning",
-    desc: "Hybrid models that fit your professional schedule without compromising quality or academic rigor.",
+    desc: "Fits your life, not the other way around. Hybrid, on your schedule, zero compromise on rigor.",
   },
   {
     icon: "trending_up",
     title: "Proven Outcomes",
-    desc: "94% of our graduates report professional advancement within six months of completing their curriculum.",
+    desc: "94% moved forward within 6 months. Not a promise — a track record.",
   },
 ];
 
@@ -37,9 +37,7 @@ export default function WhyChoose() {
             Why Choose BODHI LEARNING?
           </h2>
           <p className="text-on-surface-variant text-lg leading-relaxed">
-            We don&apos;t just provide content; we facilitate growth. Our
-            methodology combines rigorous academic standards with practical,
-            real-world application.
+            Results, not rhetoric. Every session is built to move you forward — fast.
           </p>
         </div>
 
@@ -142,10 +140,7 @@ export default function WhyChoose() {
                 Shaping the Future of Education
               </h3>
               <p className="text-white/70 text-lg leading-relaxed">
-                At BODHI LEARNING, we believe that the right opportunity can
-                turn dreams into limitless potential. Our community-driven
-                institution is renowned for its unique contributions to
-                professional excellence and academic rigor.
+                We don&apos;t teach for the sake of teaching. We teach to transform. 15+ years. 25,000+ learners. 19,000+ educators. One mission: turn potential into proof.
               </p>
             </div>
           </div>

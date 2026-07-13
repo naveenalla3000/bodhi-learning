@@ -49,9 +49,7 @@ export default function CoreFocus() {
                 English Mastery
               </h3>
               <p className="text-on-surface-variant leading-relaxed">
-                Deep immersion into global communication standards. Master the
-                global language of business and academia with our immersive
-                curriculum.
+                Speak so the room stops talking. Fluency isn&apos;t the goal — command is. Master the language boardrooms and top universities actually speak.
               </p>
             </div>
             <div className="mt-6">
@@ -80,9 +78,7 @@ export default function CoreFocus() {
                 Dynamic Communication
               </h3>
               <p className="text-on-surface-variant leading-relaxed">
-                Negotiation and social presence for professional environments.
-                Effective dialogue and professional presence for complex social
-                and corporate environments.
+                Win the room before you say a word. Negotiate, persuade, and hold presence when it matters most — under pressure, on stage, in the deal.
               </p>
             </div>
             <div className="mt-6">
@@ -112,9 +108,7 @@ export default function CoreFocus() {
                   Soft Skills &amp; Employability
                 </h3>
                 <p className="text-on-surface-variant leading-relaxed">
-                  Leadership and critical thinking designed for impact. Critical
-                  thinking, leadership, and professional etiquette designed for
-                  immediate job market impact.
+                  Get hired. Get promoted. Get noticed. The leadership and thinking skills recruiters can&apos;t teach — but always look for.
                 </p>
               </div>
               <div className="mt-6">
@@ -156,8 +150,7 @@ export default function CoreFocus() {
                 Teacher Education
               </h3>
               <p className="text-white leading-relaxed">
-                Pedagogical excellence for educators aiming to transform the
-                classroom experience.
+                Turn your classroom into your legacy. Pedagogy that makes students lean in, not zone out.
               </p>
             </div>
             <div className="mt-6">
