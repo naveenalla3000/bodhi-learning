@@ -60,7 +60,7 @@ export default function WhoWeServe() {
                   className="group/link inline-flex items-center gap-2 text-primary font-bold uppercase text-xs tracking-widest"
                 >
                   Join Program
-                  <span className="h-px w-8 bg-primary transition-all duration-300 group-hover/link:w-12" />
+                  <span className="material-symbols-outlined text-[16px] transition-transform duration-300 group-hover/link:translate-x-1">arrow_forward</span>
                 </a>
               </div>
             </div>
@@ -158,7 +158,7 @@ export default function WhoWeServe() {
                   className="group/link inline-flex items-center gap-2 text-primary font-bold uppercase text-xs tracking-widest"
                 >
                   Join Initiative
-                  <span className="h-px w-8 bg-primary transition-all duration-300 group-hover/link:w-12" />
+                  <span className="material-symbols-outlined text-[16px] transition-transform duration-300 group-hover/link:translate-x-1">arrow_forward</span>
                 </a>
               </div>
             </div>

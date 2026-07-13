@@ -22,8 +22,8 @@ const graduatesImage =
   "https://lh3.googleusercontent.com/aida-public/AB6AXuDXHr465AHIOS6xE1g-I6vYB5qXom40Db7ipoi6t5MuAgEyOxWUP3nOXwU5l7h3I59Ex3aTOh9VTRcUkcUsssg81bHjIApgJq-wRFGTE5FTE8Hj170KWJDzrC6BG7V8SO4QnzR06ieruVLBtS6_9LGss7XNWr2c72Y_OOjgkC9X-mq0WItqeFJ3fkWlH_mYqOiwYdpExrGZvFjJ4crX-A01HG6nl7O3U2sdv0UQL7SpBDYB_cLsevGMWI2xiyDDeayi3FVrJg91Dg";
 
 const stats = [
-  { value: "19,000k+", label: "Educators Empowered", pct: "75%" },
-  { value: "25,000k+", label: "Learners Trained", pct: "85%" },
+  { value: "19,000+", label: "Educators Empowered", pct: "75%" },
+  { value: "25,000+", label: "Learners Trained", pct: "85%" },
   { value: "30+", label: "Corporate Clients", pct: "60%" },
   { value: "15+", label: "Years of Excellence", pct: "95%" },
 ];
