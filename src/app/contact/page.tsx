@@ -41,18 +41,18 @@ const contactCards = [
   {
     icon: "location_on",
     title: "Headquarters",
-    lines: ["42 Knowledge Park, Koramangala", "Bengaluru, Karnataka 560034"],
+    lines: ["H. No 52, ARV AKRITI VIVA, Osman Nagar - Tellapur", "Hyderabad, Telangana 500019"],
   },
   {
     icon: "call",
     title: "Advisory Hotline",
-    lines: ["+91 98765 43210"],
+    lines: ["+91 91103 85231"],
     sub: "Mon–Sat, 9:00 AM – 6:00 PM IST",
   },
   {
     icon: "mail",
     title: "Institutional Support",
-    lines: ["hello@bodhilearning.com"],
+    lines: ["lavanyarao@bodhilearning.org"],
   },
 ];
 

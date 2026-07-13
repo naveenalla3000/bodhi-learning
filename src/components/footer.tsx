@@ -86,9 +86,9 @@ export default function Footer() {
             </h4>
             <div className="flex flex-col gap-4">
               {[
-                { icon: "location_on", text: "Hyderabad, Telangana" },
-                { icon: "mail", text: "hello@bodhilearning.in", href: "mailto:hello@bodhilearning.in" },
-                { icon: "call", text: "+91 98765 43210" },
+                { icon: "location_on", text: "H. No 52, ARV AKRITI VIVA, Osman Nagar - Tellapur, Hyderabad 500019" },
+                { icon: "mail", text: "lavanyarao@bodhilearning.org", href: "mailto:lavanyarao@bodhilearning.org" },
+                { icon: "call", text: "+91 91103 85231" },
                 { icon: "schedule", text: "Mon–Sat, 9 AM – 7 PM" },
               ].map((item) => (
                 <div key={item.icon} className="flex items-start gap-3">
