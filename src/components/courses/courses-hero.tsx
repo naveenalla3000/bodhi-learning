@@ -22,16 +22,16 @@ export default function CoursesHero() {
             Featured
           </span>
           <h1 className="font-montserrat text-2xl md:text-3xl font-bold leading-tight">
-            Advanced English Proficiency
+            English Language Enhancement
           </h1>
           <p className="text-on-primary/80 text-lg max-w-xl leading-relaxed">
-            Elevate your linguistic capabilities with an expert-led curriculum designed for the highest professional standards.
+            Fluency isn&apos;t the goal — command is. CELTA-certified trainers build your spoken and written English to the standard that gets you heard.
           </p>
           <div className="flex flex-col sm:flex-row gap-4 pt-2">
-            <AnimatedButton href="/courses/advanced-english-proficiency" variant="outline-light" size="md" className="w-full sm:flex-1">
+            <AnimatedButton href="/courses/english-language-enhancement" variant="outline-light" size="md" className="w-full sm:flex-1">
               Enroll Today
             </AnimatedButton>
-            <AnimatedButton href="/courses/advanced-english-proficiency" variant="outline-light" size="md" className="w-full sm:flex-1">
+            <AnimatedButton href="/courses/english-language-enhancement" variant="outline-light" size="md" className="w-full sm:flex-1">
               View Syllabus
             </AnimatedButton>
           </div>
