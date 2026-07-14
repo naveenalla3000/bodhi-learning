@@ -12,28 +12,32 @@ export const metadata: Metadata = {
 
 const faqs = [
   {
-    q: "How do institutional partnerships function?",
-    a: "We collaborate with universities and corporate entities to integrate our proprietary mastery-based learning frameworks into existing curricula. Each partnership is managed by a dedicated academic consultant to ensure bespoke alignment with organisational goals.",
+    q: "What are Bodhi Learning's core programs?",
+    a: "Four product lines: English Language Enhancement for students, Workforce Development for employability and readiness, Technical Skills training in Java, Python, SQL and more, and Teacher Development covering behaviour, 21st-century pedagogy, and English as a language. Corporate teams get a fifth track built from the same essential-skills foundation.",
   },
   {
-    q: "Are teacher training programs certified?",
-    a: "Yes, all BODHI LEARNING pedagogical training modules are globally recognised and come with institutional accreditation certificates upon successful completion of the mastery assessment phase.",
+    q: "Are your trainers actually certified, or is that just marketing?",
+    a: "Genuinely certified — our team holds University of Cambridge credentials ranging from TKT to CIDTT to CELTA. That's the same standard Cambridge uses to certify English teachers worldwide.",
   },
   {
-    q: "Do you offer on-site consulting?",
-    a: "While our core delivery is digital-first, we provide intensive on-site strategic workshops for institutional partners at the Enterprise level. Contact our support team to discuss logistics for your region.",
+    q: "How is AI used in your programs?",
+    a: "As leverage, not a replacement. Students get AI-powered practice — conversation partners, mock interviews, coding assistants. Teachers get AI tools for lesson planning and classroom design. In every case, a Cambridge-certified human trainer reviews the work, corrects what the AI missed, and makes sure the skill is actually yours by the end of it.",
   },
   {
-    q: "What is the typical duration for organisational transformation?",
-    a: "Strategic transformation timelines vary by institutional scale, typically ranging from 3 to 12 months for full integration of the Bodhi Method.",
+    q: "Will AI replace the mentors and teachers in your programs?",
+    a: "No — and it never will on our watch. AI drafts, simulates, and speeds things up. Our certified mentors are the ones who tell you when it's wrong, when it's flat, and when the real work is still yours to do.",
   },
   {
-    q: "Can we customise individual learning pathways?",
-    a: "Absolutely. Our academic architects work closely with your leadership to tailor content modules and assessment criteria to your specific institutional requirements.",
+    q: "Do you offer on-site consulting or corporate workshops?",
+    a: "Yes, for institutional and Enterprise partners we run intensive on-site workshops covering our core skill tracks plus practical AI-integration sessions for staff. Contact our support team to discuss logistics for your region.",
   },
   {
-    q: "How do you measure student learning outcomes?",
-    a: "We utilise proprietary mastery-based analytics that track cognitive retention, practical application, and performance metrics in real-time, providing deep insights into learner progress.",
+    q: "Can we customise a learning pathway for our institution or company?",
+    a: "Absolutely. Our academic architects work with your leadership to combine our four product lines — language, workforce readiness, technical skills, and teacher/corporate training — with AI-use guidelines tailored to your organisation.",
+  },
+  {
+    q: "How do you measure learning outcomes?",
+    a: "We track cognitive retention, practical application, and performance metrics in real time through proprietary mastery-based analytics — and flag over-reliance on AI early, so learners stay in the driver's seat of their own skill-building.",
   },
 ];
 
