@@ -15,12 +15,7 @@ export default function OurNarrative() {
             </h2>
             <div className="w-16 h-0.5 bg-primary mb-6" />
             <p className="text-on-surface-variant leading-relaxed">
-              Bodhi (Sanskrit: बोधि) represents the understanding possessed by a
-              Buddha regarding the true nature of things. At BODHI LEARNING, we
-              translate this philosophy into secular educational rigor. Founded
-              by a collective of linguists and pedagogical designers, we sought
-              to move beyond rote memorization toward authentic &ldquo;Active
-              Mastery.&rdquo;
+              Bodhi (Sanskrit: बोधि) represents the clear-eyed understanding. At BODHI LEARNING, we translate that into secular rigor: the judgment to use every tool available — including AI — without losing what makes you irreplaceable. Founded by a collective of linguists and pedagogical designers, we built our &ldquo;Active Mastery&rdquo; method to move learners beyond rote memorization. Today that means knowing exactly when AI can draft, simulate, or speed things up — and when only you can do the real work.
             </p>
           </div>
 
@@ -29,12 +24,12 @@ export default function OurNarrative() {
               {
                 icon: "lightbulb",
                 title: "Our Mission",
-                desc: "To provide a transformative environment where professional communication and pedagogical skills are honed with precision.",
+                desc: "To build an environment where language, employability, technical, and pedagogical skills — sharpened with AI, never replaced by it — are honed with the same precision.",
               },
               {
                 icon: "visibility",
                 title: "Our Vision",
-                desc: "To become the world's most trusted partner in employability, recognized for producing articulate, adaptable leaders.",
+                desc: "To become the world's most trusted partner in employability: producing learners, teachers, and professionals who out-think, out-communicate, and outwork anyone leaning on AI alone.",
               },
             ].map((card) => (
               <div

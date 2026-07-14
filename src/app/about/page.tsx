@@ -3,8 +3,8 @@ import Nav from "@/components/nav";
 import Footer from "@/components/footer";
 import AboutHero from "@/components/about/about-hero";
 import OurNarrative from "@/components/about/our-narrative";
-import Milestones from "@/components/about/milestones";
-import ScholarlyLeadership from "@/components/about/scholarly-leadership";
+import Certifications from "@/components/about/certifications";
+import FounderEdge from "@/components/about/founder-edge";
 import AboutCta from "@/components/about/about-cta";
 
 export const metadata: Metadata = {
@@ -20,8 +20,8 @@ export default function AboutPage() {
       <main className="pt-28">
         <AboutHero />
         <OurNarrative />
-        <Milestones />
-        <ScholarlyLeadership />
+        <Certifications />
+        <FounderEdge />
         <AboutCta />
       </main>
       <Footer />
