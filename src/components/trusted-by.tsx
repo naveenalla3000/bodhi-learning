@@ -11,13 +11,13 @@ const imgNALSAR =
 
 const institutions = [
   { name: "IIM Visakhapatnam", img: imgIIM },
-  { name: "IIIT Kurnool", img: null, icon: "school" },
-  { name: "JNTU Kakinada", img: null, icon: "account_balance" },
-  { name: "Osmania University", img: null, icon: "school" },
+  { name: "IIIT Kurnool", img: "/iiit-kurnool.jpg" },
+  { name: "JNTU Kakinada", img: "/jntu-kakinada.png" },
+  { name: "Osmania University", img: "/osmania-university.png" },
   { name: "Hyderabad University", img: imgHydUniv },
   { name: "IIT Hyderabad", img: imgIIT },
   { name: "NALSAR University", img: imgNALSAR },
-  { name: "Gitam University", img: null, icon: "school" },
+  { name: "Gitam University", img: "/gitam-university.svg" },
 ];
 
 function LogoItem({ inst }: { inst: (typeof institutions)[number] }) {

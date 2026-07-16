@@ -1,5 +1,4 @@
 import type { Metadata } from "next";
-import Image from "next/image";
 import Nav from "@/components/nav";
 import Footer from "@/components/footer";
 import ContactForm from "@/components/contact/contact-form";
@@ -123,23 +122,18 @@ export default function ContactPage() {
                 </div>
               ))}
 
-              {/* Decorative image */}
-              <div className="flex-1 rounded-2xl overflow-hidden relative min-h-[180px]">
-                <Image
-                  src="https://lh3.googleusercontent.com/aida-public/AB6AXuA2ODv5T03PWV0lUqe1cSzEOX8rpgunk0xS3OG_XauyasQ2dCdoN1_Jc-93ElNzL3zTTv4I6O2MAKeLBW5jn79SwTUHMHcdRA1NeSA-5ZBP9KFcy8DbriSpM1wD2lM-Xl_yirrzNm9WUuZdCYLcNzUhU_fgiBO6LAWFBHj2v1hCrJJADjdlsjrAWbEcyHnTOUoN1tI62qsWMv0dlxtiz2m2zCfORbcraDFBFQVIc-qXvz-mw1dK_GQ0PBJRhRhoJH_L0CRBn8O5iA"
-                  alt="BODHI LEARNING campus"
-                  fill
-                  className="object-cover"
-                  sizes="(max-width: 1024px) 100vw, 40vw"
+              {/* Map */}
+              <div className="flex-1 rounded-2xl overflow-hidden min-h-[220px]">
+                <iframe
+                  src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3806.184393156084!2d78.28095037539431!3d17.450886383447163!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3bcbed291847a6a1%3A0x3fd9ec50d28c49c1!2sAakriti%20Arv%20Viva!5e0!3m2!1sen!2sus!4v1784039437436!5m2!1sen!2sus"
+                  width="100%"
+                  height="100%"
+                  style={{ border: 0, minHeight: "220px" }}
+                  allowFullScreen
+                  loading="lazy"
+                  referrerPolicy="strict-origin-when-cross-origin"
+                  title="BODHI LEARNING location"
                 />
-                <div className="absolute inset-0 bg-primary/25 flex items-end p-5">
-                  <div className="flex items-center gap-2 bg-white/80 backdrop-blur-sm px-4 py-2 rounded-full">
-                    <span className="material-symbols-outlined text-primary text-[16px]">verified</span>
-                    <span className="font-montserrat text-xs font-bold text-primary tracking-widest uppercase">
-                      Accredited Excellence
-                    </span>
-                  </div>
-                </div>
               </div>
             </div>
 

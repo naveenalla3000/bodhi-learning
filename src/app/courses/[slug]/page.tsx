@@ -40,13 +40,13 @@ export default async function CourseDetailPage({
       <main className="pt-20">
 
         {/* ── Hero ───────────────────────────────────────────── */}
-        <section className="relative min-h-[70vh] flex items-center overflow-hidden">
+        <section className="relative aspect-[19/10] min-h-[300px] flex items-center overflow-hidden">
           <div className="absolute inset-0 z-0">
             <Image
               src={course.heroImg}
               alt={course.title}
               fill
-              className="object-cover"
+              className="object-cover object-center"
               priority
               sizes="100vw"
             />
@@ -209,7 +209,7 @@ export default async function CourseDetailPage({
                   src={course.instructor.img}
                   alt={course.instructor.name}
                   fill
-                  className="object-cover"
+                  className="object-cover object-top"
                   sizes="(max-width: 1024px) 100vw, 50vw"
                 />
               </div>
@@ -230,9 +230,14 @@ export default async function CourseDetailPage({
                   <span className="text-primary border-b border-primary text-xs font-bold uppercase tracking-widest hover:opacity-60 transition-opacity cursor-pointer">
                     View Publications
                   </span>
-                  <span className="text-primary border-b border-primary text-xs font-bold uppercase tracking-widest hover:opacity-60 transition-opacity cursor-pointer">
+                  <Link
+                    href="https://www.linkedin.com/in/lavanya-rao-552b4a53/"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="text-primary border-b border-primary text-xs font-bold uppercase tracking-widest hover:opacity-60 transition-opacity"
+                  >
                     LinkedIn Profile
-                  </span>
+                  </Link>
                 </div>
               </div>
             </div>

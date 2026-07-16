@@ -47,7 +47,7 @@ export default function CourseGrid() {
             className="bg-surface-container-lowest rounded-2xl overflow-hidden group border border-surface-container-high hover:shadow-xl transition-all duration-300"
             data-gsap-item
           >
-            <div className="h-56 relative overflow-hidden">
+            <div className="aspect-[19/10] relative overflow-hidden">
               <Image
                 src={course.cardImg}
                 alt={course.title}

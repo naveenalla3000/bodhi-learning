@@ -1,54 +1,19 @@
-import Image from "next/image";
-import AnimatedButton from "@/components/animated-button";
-
 export default function CoursesHero() {
   return (
     <section className="mb-16" data-gsap="fade-up">
-      <div className="relative overflow-hidden rounded-2xl bg-primary text-on-primary p-10 md:p-14 flex flex-col md:flex-row items-center gap-12 min-h-[420px]">
-        {/* Background texture */}
-        <div className="absolute inset-0 opacity-[0.04] pointer-events-none">
-          <svg width="100%" height="100%" xmlns="http://www.w3.org/2000/svg">
-            <defs>
-              <pattern id="dots-hero" x="0" y="0" width="24" height="24" patternUnits="userSpaceOnUse">
-                <circle cx="2" cy="2" r="1.5" fill="white" />
-              </pattern>
-            </defs>
-            <rect width="100%" height="100%" fill="url(#dots-hero)" />
-          </svg>
-        </div>
-
-        <div className="relative z-10 md:w-3/5 space-y-6">
-          <span className="inline-block px-4 py-1.5 bg-secondary text-on-secondary rounded-full text-xs font-bold tracking-widest uppercase">
-            Featured
-          </span>
-          <h1 className="font-montserrat text-2xl md:text-3xl font-bold leading-tight">
-            English Language Enhancement
-          </h1>
-          <p className="text-on-primary/80 text-lg max-w-xl leading-relaxed">
-            Fluency isn&apos;t the goal — command is. CELTA-certified trainers build your spoken and written English to the standard that gets you heard.
-          </p>
-          <div className="flex flex-col sm:flex-row gap-4 pt-2">
-            <AnimatedButton href="/courses/english-language-enhancement" variant="outline-light" size="md" className="w-full sm:flex-1">
-              Enroll Today
-            </AnimatedButton>
-            <AnimatedButton href="/courses/english-language-enhancement" variant="outline-light" size="md" className="w-full sm:flex-1">
-              View Syllabus
-            </AnimatedButton>
-          </div>
-        </div>
-
-        <div className="relative z-10 md:w-2/5 flex justify-center">
-          <Image
-            src="https://lh3.googleusercontent.com/aida-public/AB6AXuDo9-cQ3D84u7VzsgTKVqazdhUWdENuQi3zakXz_3BJMDQGWWf0-LSqebgqjbawlbzeWetXqpq7yR_S--WTfdStuGXaevoF-jcRhdnRHIop1XJemRjmEHUgz6m1wYuBFoumxkr8TDHI_xLeUrm1BRndRB4Hci3ekaZ6Hd-YSTKR5T_aUBavql_XwLdXXoHMeqGGCUM3_EnzJJatbhX56cpM1lKSv8PMYrFSTvNcsIH5UweA8s4s-GPszxerFqP7dkgW2ydhD5YByg"
-            alt="Advanced English Proficiency"
-            width={560}
-            height={320}
-            className="w-full h-72 object-cover rounded-xl shadow-2xl"
-            sizes="(max-width: 768px) 100vw, 40vw"
-            priority
-          />
-        </div>
+      <div className="flex items-center gap-4 mb-6">
+        <div className="w-12 h-px bg-secondary" />
+        <span className="font-montserrat text-secondary font-semibold tracking-[0.3em] uppercase text-xs">
+          Our Offerings
+        </span>
+        <div className="w-12 h-px bg-secondary" />
       </div>
+      <h1 className="font-montserrat text-4xl md:text-5xl font-bold text-primary tracking-tight leading-tight mb-6">
+        Four offerings.
+      </h1>
+      <p className="font-inter text-on-surface-variant text-base max-w-3xl leading-relaxed">
+        Every one of them now teaches AI as leverage — not a shortcut, not a replacement, and never a substitute for a Cambridge-certified human in the room.
+      </p>
     </section>
   );
 }

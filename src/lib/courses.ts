@@ -49,14 +49,12 @@ const COURSES: Course[] = [
     mode: "Hybrid Learning",
     price: "Contact Us",
     badge: "Featured",
-    heroImg:
-      "https://lh3.googleusercontent.com/aida-public/AB6AXuDo9-cQ3D84u7VzsgTKVqazdhUWdENuQi3zakXz_3BJMDQGWWf0-LSqebgqjbawlbzeWetXqpq7yR_S--WTfdStuGXaevoF-jcRhdnRHIop1XJemRjmEHUgz6m1wYuBFoumxkr8TDHI_xLeUrm1BRndRB4Hci3ekaZ6Hd-YSTKR5T_aUBavql_XwLdXXoHMeqGGCUM3_EnzJJatbhX56cpM1lKSv8PMYrFSTvNcsIH5UweA8s4s-GPszxerFqP7dkgW2ydhD5YByg",
-    cardImg:
-      "https://lh3.googleusercontent.com/aida-public/AB6AXuDo9-cQ3D84u7VzsgTKVqazdhUWdENuQi3zakXz_3BJMDQGWWf0-LSqebgqjbawlbzeWetXqpq7yR_S--WTfdStuGXaevoF-jcRhdnRHIop1XJemRjmEHUgz6m1wYuBFoumxkr8TDHI_xLeUrm1BRndRB4Hci3ekaZ6Hd-YSTKR5T_aUBavql_XwLdXXoHMeqGGCUM3_EnzJJatbhX56cpM1lKSv8PMYrFSTvNcsIH5UweA8s4s-GPszxerFqP7dkgW2ydhD5YByg",
-    desc: "Fluency isn't the goal — command is. CELTA-certified trainers build your spoken and written English to the standard that gets you heard.",
+    heroImg: "/english-language-enhancement.png",
+    cardImg: "/english-language-enhancement.png",
+    desc: "Speak so the room stops talking. Our CELTA-certified trainers teach English as a living language, not a subject to memorise.",
     overview: [
-      "English Language Enhancement is built for students who want more than grammatical competence — they want presence, precision, and the ability to own any room they walk into. This isn't a vocabulary drill. It's a full-stack communication upgrade.",
-      "Led by CELTA-certified trainers, every session integrates AI-powered conversation practice with human feedback that catches what the AI misses. You leave with English that works — in interviews, in classrooms, and in the world.",
+      "Speak so the room stops talking. Our CELTA-certified trainers teach English as a living language, not a subject to memorise — and now pair every session with AI conversation practice and pronunciation feedback tools, so you get unlimited reps between classes.",
+      "The AI catches your accent drift and grammar slips in real time; your trainer is still the one who tells you when you actually sound convincing.",
     ],
     syllabusFocus: [
       "Spoken Fluency & Pronunciation",
@@ -80,7 +78,7 @@ const COURSES: Course[] = [
       name: "Lavanya Rao",
       credential: "CELTA Certified, University of Cambridge | 17+ Years L&D",
       bio: "Bodhi's founder brings 17+ years of Learning & Development leadership from Amazon and ServiceNow to every curriculum. CELTA-certified by the University of Cambridge and a Lean Six Sigma Black Belt, she built Bodhi's frameworks to meet Fortune 500 standards — then made them available to every learner.",
-      img: "https://lh3.googleusercontent.com/aida-public/AB6AXuBznnzKwZi4FDVUEzX_X5u1y4X-sKL1neqtKvUvTgUaZs3fnFC3DEuOucEy4Lg0zsSHL9pMsQo25nx6crBsW_KcAg1aqFIcxAoGu81q7vM_tsRzfeEJ0ko5VGDpvVhXpcNfuiG6z2rsKA3qL8VeVSn7bb3ImGNWFArPkey_PyOSxajsMQxmOu2qsYkGwkvpTIiCPWCxih_OWrg9Gb3to5AJ0Iot1be6e-V0piMdhgJpTjz7xNsJz5VtZseNNxNlsOg3YzHlTOAbzA",
+      img: "/lavanya-rao.jpg",
     },
     features: [
       { icon: "verified", title: "CELTA Certified", desc: "Trainers hold University of Cambridge credentials — the global standard." },
@@ -99,14 +97,12 @@ const COURSES: Course[] = [
     mode: "Hybrid Learning",
     price: "Contact Us",
     badge: "Employability",
-    heroImg:
-      "https://lh3.googleusercontent.com/aida-public/AB6AXuA2OiiFDlYPmjLzkvggfF_nxEJOBuq5tHbpjNsb8CQmqA114FU6xXnrY63rXfOZLZPT-HH1s7BRRN3kERlMMU0XRN_dHhbcw3cK1W2RHTBjjMGnm-z9foznK72490kgd7Ff6RTswARym6ld8PbcME40o-bMq-pgH4n2yuF8hjJH7-nO-J33RMUAG1aCMETYCiNNArI-zcIob-Mg82PPpVZJ8wdztrNicDvS75KI29twK1cGHOiL3QsGR9IRqVaNflJZP7sxfZQutg",
-    cardImg:
-      "https://lh3.googleusercontent.com/aida-public/AB6AXuA2OiiFDlYPmjLzkvggfF_nxEJOBuq5tHbpjNsb8CQmqA114FU6xXnrY63rXfOZLZPT-HH1s7BRRN3kERlMMU0XRN_dHhbcw3cK1W2RHTBjjMGnm-z9foznK72490kgd7Ff6RTswARym6ld8PbcME40o-bMq-pgH4n2yuF8hjJH7-nO-J33RMUAG1aCMETYCiNNArI-zcIob-Mg82PPpVZJ8wdztrNicDvS75KI29twK1cGHOiL3QsGR9IRqVaNflJZP7sxfZQutg",
-    desc: "The gap between a degree and a job isn't knowledge — it's readiness. We close it with real skills, real practice, and a track record that proves it.",
+    heroImg: "/workforce-development.png",
+    cardImg: "/workforce-development.png",
+    desc: "Get hired. Get promoted. Get noticed. We build resumes, interview presence, and professional readiness the old-fashioned way — through practice.",
     overview: [
-      "Workforce Development is for graduates, job-seekers, and early-career professionals who need more than a CV — they need to walk into a room and perform. We build the communication, critical thinking, and professional readiness skills that employers actually screen for.",
-      "AI-powered mock interviews and resume optimisation tools accelerate your preparation. Certified mentors then sharpen what the AI surfaces and hold you to the standard that gets offers.",
+      "Get hired. Get promoted. Get noticed. We build resumes, interview presence, and professional readiness the old-fashioned way — through practice — and now with AI-powered mock interviews, resume optimisation tools, and LinkedIn profile building baked into the program.",
+      "You'll walk in having rehearsed against an AI interviewer dozens of times, so the real one feels easy. A human coach still tells you what the algorithm can't: how you actually came across.",
     ],
     syllabusFocus: [
       "Professional Communication & Presence",
@@ -130,7 +126,7 @@ const COURSES: Course[] = [
       name: "Lavanya Rao",
       credential: "CELTA Certified, University of Cambridge | 17+ Years L&D",
       bio: "Bodhi's founder brings 17+ years of Learning & Development leadership from Amazon and ServiceNow to every curriculum. CELTA-certified by the University of Cambridge and a Lean Six Sigma Black Belt, she built Bodhi's frameworks to meet Fortune 500 standards — then made them available to every learner.",
-      img: "https://lh3.googleusercontent.com/aida-public/AB6AXuBznnzKwZi4FDVUEzX_X5u1y4X-sKL1neqtKvUvTgUaZs3fnFC3DEuOucEy4Lg0zsSHL9pMsQo25nx6crBsW_KcAg1aqFIcxAoGu81q7vM_tsRzfeEJ0ko5VGDpvVhXpcNfuiG6z2rsKA3qL8VeVSn7bb3ImGNWFArPkey_PyOSxajsMQxmOu2qsYkGwkvpTIiCPWCxih_OWrg9Gb3to5AJ0Iot1be6e-V0piMdhgJpTjz7xNsJz5VtZseNNxNlsOg3YzHlTOAbzA",
+      img: "/lavanya-rao.jpg",
     },
     features: [
       { icon: "smart_toy", title: "AI Mock Interviews", desc: "Unlimited AI interview practice across industries and roles." },
@@ -149,14 +145,12 @@ const COURSES: Course[] = [
     mode: "Hybrid Learning",
     price: "Contact Us",
     badge: "Technical",
-    heroImg:
-      "https://lh3.googleusercontent.com/aida-public/AB6AXuAUj-7Ch2rGVO6KnIZqpvxyWInEqhkwPsCGaNAmlsSBmqOShnvmsUbUCnGgsIQ_Q4Pxq7kt7KnqEML3bEuVIZQbKRg-oqn1ObbsSBkaYghIGHob4QLPuWhboV_HY53Iw_JnTmo8Y9QHmRjX5NjXBmU1G0Kf8aU3THTNqfzlV0WAEJI2RdVDyik0dSS_ebI0Xy4KVXfr6sZNn0P0dFpFWRmREUdaof0qwGVIcmSbw5co62lACmQeNWKP53T9curOxZttz8YTs_NUjw",
-    cardImg:
-      "https://lh3.googleusercontent.com/aida-public/AB6AXuAUj-7Ch2rGVO6KnIZqpvxyWInEqhkwPsCGaNAmlsSBmqOShnvmsUbUCnGgsIQ_Q4Pxq7kt7KnqEML3bEuVIZQbKRg-oqn1ObbsSBkaYghIGHob4QLPuWhboV_HY53Iw_JnTmo8Y9QHmRjX5NjXBmU1G0Kf8aU3THTNqfzlV0WAEJI2RdVDyik0dSS_ebI0Xy4KVXfr6sZNn0P0dFpFWRmREUdaof0qwGVIcmSbw5co62lACmQeNWKP53T9curOxZttz8YTs_NUjw",
-    desc: "Code with confidence. AI pair-programming keeps the pace high — prove-you-know-it checkpoints make sure the skill is actually yours.",
+    heroImg: "/technical-skills.png",
+    cardImg: "/technical-skills.png",
+    desc: "Code isn't optional anymore, and neither is knowing how to use AI to code faster. We teach the fundamentals first — logic, syntax, debugging.",
     overview: [
-      "Technical Skills training is for learners who need to build or sharpen coding ability across Java, Python, SQL, and more — and want to do it at a pace that actually sticks. We don't lecture you into competence. We build it through doing.",
-      "AI pair-programming tools keep the momentum going between mentor sessions. But every checkpoint is human-reviewed: a certified trainer confirms you understand the code, not just that you ran it.",
+      "Code isn't optional anymore, and neither is knowing how to use AI to code faster. We teach the fundamentals first — logic, syntax, debugging — then bring in AI pair-programming tools the way real engineering teams use them: to speed up boilerplate, catch bugs, and explore alternatives, never to skip the thinking.",
+      "Every project includes a \"prove you understand it\" checkpoint, so you leave able to code without the AI, not dependent on it.",
     ],
     syllabusFocus: [
       "Core Programming in Java, Python & SQL",
@@ -180,7 +174,7 @@ const COURSES: Course[] = [
       name: "Lavanya Rao",
       credential: "CELTA Certified, University of Cambridge | 17+ Years L&D",
       bio: "Bodhi's founder brings 17+ years of Learning & Development leadership from Amazon and ServiceNow to every curriculum. CELTA-certified by the University of Cambridge and a Lean Six Sigma Black Belt, she built Bodhi's frameworks to meet Fortune 500 standards — then made them available to every learner.",
-      img: "https://lh3.googleusercontent.com/aida-public/AB6AXuBznnzKwZi4FDVUEzX_X5u1y4X-sKL1neqtKvUvTgUaZs3fnFC3DEuOucEy4Lg0zsSHL9pMsQo25nx6crBsW_KcAg1aqFIcxAoGu81q7vM_tsRzfeEJ0ko5VGDpvVhXpcNfuiG6z2rsKA3qL8VeVSn7bb3ImGNWFArPkey_PyOSxajsMQxmOu2qsYkGwkvpTIiCPWCxih_OWrg9Gb3to5AJ0Iot1be6e-V0piMdhgJpTjz7xNsJz5VtZseNNxNlsOg3YzHlTOAbzA",
+      img: "/lavanya-rao.jpg",
     },
     features: [
       { icon: "smart_toy", title: "AI Pair-Programming", desc: "AI coding assistant keeps pace high between mentor sessions." },
@@ -199,14 +193,12 @@ const COURSES: Course[] = [
     mode: "Hybrid Learning",
     price: "Contact Us",
     badge: "Education",
-    heroImg:
-      "https://lh3.googleusercontent.com/aida-public/AB6AXuDBVhucu0kssyHoXzrMkIq2fb4kNJTVkw4-QQzKLy1kCK_Pd-qlRov2zfaPsiW3YfMIy5rQzDIBXkzroqdFpJDK-1SXvWryUdduUgBykiMh5oSx-iV6CmWOkVHMgAtI0EbBrBoMncItEVrv5O8drqrgNKzBxfvCHazROh-FdUcsUZCO-7h_zk8caYBuwFZ_SPV-I8Fj-aF4WnenJb2MmkluZOL89Xx-weoeWcHJncK-OgZRxQUySpUD-htXyls4LtXRjSyhin6oNA",
-    cardImg:
-      "https://lh3.googleusercontent.com/aida-public/AB6AXuDBVhucu0kssyHoXzrMkIq2fb4kNJTVkw4-QQzKLy1kCK_Pd-qlRov2zfaPsiW3YfMIy5rQzDIBXkzroqdFpJDK-1SXvWryUdduUgBykiMh5oSx-iV6CmWOkVHMgAtI0EbBrBoMncItEVrv5O8drqrgNKzBxfvCHazROh-FdUcsUZCO-7h_zk8caYBuwFZ_SPV-I8Fj-aF4WnenJb2MmkluZOL89Xx-weoeWcHJncK-OgZRxQUySpUD-htXyls4LtXRjSyhin6oNA",
-    desc: "Give your teachers tools your competitors' schools don't have. TKT & CIDTT certified training that transforms how classrooms work.",
+    heroImg: "/teacher-development.png",
+    cardImg: "/teacher-development.png",
+    desc: "Turn your classroom into your legacy. TKT and CIDTT-certified programs covering behaviour remodelling, 21st-century pedagogy, and English as a language for real communication.",
     overview: [
-      "Teacher Development is a rigorous upskilling program for practising educators who want to master classroom behaviour, 21st-century pedagogy, and English as a language of instruction. Certified by TKT and CIDTT — the University of Cambridge benchmarks for teacher excellence.",
-      "AI lesson planning tools accelerate preparation time so teachers spend more energy on delivery, not admin. Every lesson plan and classroom strategy is reviewed by a Cambridge-certified trainer who knows the difference between a good plan and a great lesson.",
+      "Turn your classroom into your legacy. Our TKT and CIDTT-certified programs cover behaviour remodelling, teaching to the 21st-century learner, and — critically — teaching English as a language for real communication, not a subject to be tested.",
+      "We now train teachers to use AI to build lesson plans, differentiated worksheets, and engaging classroom activities in minutes, freeing up time for what AI can't replace: reading a room, managing behaviour, and mentoring a student who's struggling.",
     ],
     syllabusFocus: [
       "Classroom Behaviour & Management",
@@ -230,7 +222,7 @@ const COURSES: Course[] = [
       name: "Lavanya Rao",
       credential: "CELTA Certified, University of Cambridge | 17+ Years L&D",
       bio: "Bodhi's founder brings 17+ years of Learning & Development leadership from Amazon and ServiceNow to every curriculum. CELTA-certified by the University of Cambridge and a Lean Six Sigma Black Belt, she built Bodhi's frameworks to meet Fortune 500 standards — then made them available to every learner.",
-      img: "https://lh3.googleusercontent.com/aida-public/AB6AXuBznnzKwZi4FDVUEzX_X5u1y4X-sKL1neqtKvUvTgUaZs3fnFC3DEuOucEy4Lg0zsSHL9pMsQo25nx6crBsW_KcAg1aqFIcxAoGu81q7vM_tsRzfeEJ0ko5VGDpvVhXpcNfuiG6z2rsKA3qL8VeVSn7bb3ImGNWFArPkey_PyOSxajsMQxmOu2qsYkGwkvpTIiCPWCxih_OWrg9Gb3to5AJ0Iot1be6e-V0piMdhgJpTjz7xNsJz5VtZseNNxNlsOg3YzHlTOAbzA",
+      img: "/lavanya-rao.jpg",
     },
     features: [
       { icon: "verified", title: "TKT & CIDTT Certified", desc: "University of Cambridge credentials — the global benchmark for teachers." },
@@ -249,14 +241,12 @@ const COURSES: Course[] = [
     mode: "On-site & Online",
     price: "Contact Us",
     badge: "Corporate",
-    heroImg:
-      "https://lh3.googleusercontent.com/aida-public/AB6AXuCXWmpwT6h2x-zTNjPwXcSpWc3cs6thjsWmEiSxTSCWjd3Ojb6LbOP4mv9YCOuNByvRczVCvHXZHNDcesjzKsR40CrvflcyrZ_80gDdFRS3S_v1gl6NCxJ7Se-daglmeZU8gc_qsrY22g2S-cvTMBHwNWxktGD8fsTSXGIRfoQpOv_HwFcsviHhnys_MOOENz967-DvYE-uvOp7ogYTfiprc-jUXC8ZG9bIoB366l1hatanryXORkaR5kpHWqRnhBau8PYJQeGM1A",
-    cardImg:
-      "https://lh3.googleusercontent.com/aida-public/AB6AXuCXWmpwT6h2x-zTNjPwXcSpWc3cs6thjsWmEiSxTSCWjd3Ojb6LbOP4mv9YCOuNByvRczVCvHXZHNDcesjzKsR40CrvflcyrZ_80gDdFRS3S_v1gl6NCxJ7Se-daglmeZU8gc_qsrY22g2S-cvTMBHwNWxktGD8fsTSXGIRfoQpOv_HwFcsviHhnys_MOOENz967-DvYE-uvOp7ogYTfiprc-jUXC8ZG9bIoB366l1hatanryXORkaR5kpHWqRnhBau8PYJQeGM1A",
-    desc: "Built from 17+ years of L&D at Amazon and ServiceNow. Communication and leadership training that shows up in next quarter's numbers.",
+    heroImg: "/corporate-training.png",
+    cardImg: "/corporate-training.png",
+    desc: "Communication training that shows up in your next quarter's numbers. Negotiation, leadership, and cross-cultural skills that get people promoted.",
     overview: [
-      "Corporate Training is the enterprise version of everything Bodhi does best: communication, leadership, critical thinking, and AI-integration — built to Fortune 500 standards because our founder spent 17+ years building L&D at that level.",
-      "Every program is designed with your organization's outcomes in mind, not a generic module library. AI workflow integration sessions are built in — so your teams learn not just the skill, but how to apply it alongside the tools already in your stack.",
+      "Communication training that shows up in your next quarter's numbers. We build the negotiation, leadership, and cross-cultural communication skills that get people promoted — and we've built AI-assisted drafting, reporting, and presentation-building workflows directly into the training.",
+      "So your teams communicate faster without communicating worse.",
     ],
     syllabusFocus: [
       "Executive Communication & Presentation",
@@ -280,7 +270,7 @@ const COURSES: Course[] = [
       name: "Lavanya Rao",
       credential: "CELTA Certified, University of Cambridge | 17+ Years L&D",
       bio: "Bodhi's founder brings 17+ years of Learning & Development leadership from Amazon and ServiceNow to every curriculum. CELTA-certified by the University of Cambridge and a Lean Six Sigma Black Belt, she built Bodhi's frameworks to meet Fortune 500 standards — then made them available to every learner.",
-      img: "https://lh3.googleusercontent.com/aida-public/AB6AXuBznnzKwZi4FDVUEzX_X5u1y4X-sKL1neqtKvUvTgUaZs3fnFC3DEuOucEy4Lg0zsSHL9pMsQo25nx6crBsW_KcAg1aqFIcxAoGu81q7vM_tsRzfeEJ0ko5VGDpvVhXpcNfuiG6z2rsKA3qL8VeVSn7bb3ImGNWFArPkey_PyOSxajsMQxmOu2qsYkGwkvpTIiCPWCxih_OWrg9Gb3to5AJ0Iot1be6e-V0piMdhgJpTjz7xNsJz5VtZseNNxNlsOg3YzHlTOAbzA",
+      img: "/lavanya-rao.jpg",
     },
     features: [
       { icon: "analytics", title: "Six Sigma Rigor", desc: "Lean Six Sigma Black Belt approach to measuring training outcomes." },
