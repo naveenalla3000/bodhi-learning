@@ -40,7 +40,7 @@ export default function SchoolCoachingPage() {
         <section className="relative w-full overflow-hidden">
           <div className="relative aspect-[16/7] w-full min-h-[340px]">
             <Image
-              src="/school-coaching-hero.avif"
+              src="/school-coaching-hero.png"
               alt="Students studying together"
               fill
               priority
