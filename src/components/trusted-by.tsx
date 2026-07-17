@@ -23,26 +23,15 @@ const institutions = [
 function LogoItem({ inst }: { inst: (typeof institutions)[number] }) {
   return (
     <div className="flex items-center justify-center mx-12 grayscale hover:grayscale-0 transition-all duration-500 opacity-60 hover:opacity-100 flex-shrink-0">
-      {inst.img ? (
-        <div className="relative h-16 md:h-20 w-32">
-          <Image
-            src={inst.img}
-            alt={inst.name}
-            fill
-            className="object-contain"
-            sizes="128px"
-          />
-        </div>
-      ) : (
-        <div className="flex flex-col items-center gap-2">
-          <span className="material-symbols-outlined text-4xl text-primary/60">
-            {inst.icon}
-          </span>
-          <span className="text-[10px] font-bold text-primary/60 uppercase tracking-widest whitespace-nowrap">
-            {inst.name}
-          </span>
-        </div>
-      )}
+      <div className="relative h-16 md:h-20 w-32">
+        <Image
+          src={inst.img}
+          alt={inst.name}
+          fill
+          className="object-contain"
+          sizes="128px"
+        />
+      </div>
     </div>
   );
 }
