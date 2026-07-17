@@ -39,7 +39,7 @@ export default function CorporateTrainingPage() {
         {/* ── Hero ── */}
         <section className="relative h-[480px] overflow-hidden">
           <Image
-            src="https://lh3.googleusercontent.com/aida-public/AB6AXuBpEXlZZ2Vqlck8QNvqwvXOwBWX6K6lr24NfbEmcE3S8oyfnrGlnLi2hHW765_xtA5AVOw6ZUYj4thojm5QdlP7knKCms4qDWnhx0Y4qFozCsvVRZroNwB76VliofMIIcku98BoI2y1ADs6zuYggxD63xRThw_zSC_X2PWOTX5MsKWD9_sMnXCjY8BEqIAFv3yJGLYaYcrx8-xb4YkkNl5jo9gtXh0GtA7T70LszWeKblbx3Wi4BQ90Wxv98qda-rT2T70otxqfF2Y"
+            src="/corporate-training-hero.png"
             alt="Corporate leadership training"
             fill
             priority
