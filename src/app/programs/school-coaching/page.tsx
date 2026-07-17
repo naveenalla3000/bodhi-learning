@@ -40,7 +40,7 @@ export default function SchoolCoachingPage() {
         <section className="relative w-full overflow-hidden">
           <div className="relative aspect-[16/7] w-full min-h-[340px]">
             <Image
-              src="https://lh3.googleusercontent.com/aida-public/AB6AXuCn6NWgAYn2CVvwoLlAz8KrSDpPk-pV6jm_DJUrn4Rabyw9-yMd3TLJBU6YoyBj7Z1UYGZ2cgrghU7k6IVz-Pr7o2FU2W9_XPI4oTY-O1BIsvBwU8RixSKNlG8Ppewr52JJ939GpjTXSrzBClejQumfoeK9A5B5SObEbX1cc_mwQR1anRDfQuxBYNuJNSLDzTpX6ojxHybnBauYCvh2Y_3_kgVeLoj6O8_I3LTrgFEjsCF8uo8ZbS8049VYR_CEm8A1tyJt9wWgIHY"
+              src="/school-coaching-hero.avif"
               alt="Students studying together"
               fill
               priority
