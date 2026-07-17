@@ -96,7 +96,7 @@ export default function TeacherTrainingPage() {
         {/* ── Hero ── */}
         <section className="relative h-[480px] w-full overflow-hidden">
           <Image
-            src="https://lh3.googleusercontent.com/aida-public/AB6AXuCKp2IMTEUSEQr12Q6zfTc6w326M-lKdWaih_KmHXbAOXfxfHOHaKgYXMDdhxtW7lhk5GToVha4wt_3djgxFGLAXPWheA_KOTPw9cbKg7K4EylKt79irW-elq_OfdrcnIW4rXOQCnRQXG3_MP3vL8hNYdAlMMJzxDq4d5cckeMOeryQuBGHK_SQvTHitpKpsl3rrhJDPMKMaW0PtxEPKphZVK3aJ1z5hrnKLXJ44ZeiYw6QuwP8fk2sufQZ4GnH_nJnqAlanAVF858"
+            src="/teacher-training-hero.png"
             alt="Teacher Training — educators in session"
             fill
             priority
