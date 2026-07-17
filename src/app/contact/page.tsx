@@ -4,9 +4,9 @@ import Footer from "@/components/footer";
 import ContactForm from "@/components/contact/contact-form";
 
 export const metadata: Metadata = {
-  title: "Contact Us | BODHI LEARNING",
+  title: "Contact Us",
   description:
-    "Connect with BODHI LEARNING's academic consultants. Reach out for institutional partnerships, course enquiries, or professional development support.",
+    "Book a free consultation, ask about enrollment, or explore partnership opportunities with BODHI LEARNING. We respond within one business day.",
 };
 
 const faqs = [

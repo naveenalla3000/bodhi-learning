@@ -5,9 +5,9 @@ import CoursesHero from "@/components/courses/courses-hero";
 import CourseGrid from "@/components/courses/course-grid";
 
 export const metadata: Metadata = {
-  title: "Our Courses | BODHI LEARNING",
+  title: "Our Courses",
   description:
-    "Discover high-impact programs in communication, leadership, and professional development designed for the modern learner.",
+    "Five Cambridge-certified programs: English Language Enhancement, Workforce Development, Technical Skills, Teacher Development, and Corporate Training. Find the one that fits your next move.",
 };
 
 export default function CoursesPage() {

@@ -6,9 +6,9 @@ import Footer from "@/components/footer";
 import AnimatedButton from "@/components/animated-button";
 
 export const metadata: Metadata = {
-  title: "K–12 Excellence | BODHI LEARNING",
+  title: "K–12 School Coaching",
   description:
-    "Cultivating cognitive depth and academic rigor through personalized mentorship and mastery of national and international curriculum standards.",
+    "12:1 student-mentor ratio. Board exam mastery, IB/IGCSE/Cambridge prep, and 21st-century skills coaching — personalised to every student.",
 };
 
 const stats = [

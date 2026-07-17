@@ -6,9 +6,9 @@ import Footer from "@/components/footer";
 import AnimatedButton from "@/components/animated-button";
 
 export const metadata: Metadata = {
-  title: "School Partners | BODHI LEARNING",
+  title: "School Partnerships",
   description:
-    "Partnering with educational institutions to foster a culture of excellence through systematic modernisation, financial sustainability, and rigorous accreditation support.",
+    "Strategic institutional consulting for schools seeking accreditation, financial sustainability, and campus modernisation. 42% average enrolment increase within 24 months.",
 };
 
 const services = [

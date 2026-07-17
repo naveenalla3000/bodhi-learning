@@ -5,9 +5,9 @@ import Nav from "@/components/nav";
 import Footer from "@/components/footer";
 
 export const metadata: Metadata = {
-  title: "Corporate Training | BODHI LEARNING",
+  title: "Corporate Training",
   description:
-    "An authoritative curriculum designed for the modern executive, blending strategic clarity with emotional intelligence. Leadership & Growth: Navigating High-Stakes Complexity.",
+    "Communication, leadership, and cross-cultural skills built to Fortune 500 standards. On-site and online delivery for teams that need results in the next quarter.",
 };
 
 const retreats = [

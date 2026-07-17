@@ -23,10 +23,71 @@ const cormorant = Cormorant_Garamond({
   display: "swap",
 });
 
+const siteUrl = "https://bodhilearning.org";
+
 export const metadata: Metadata = {
-  title: "BODHI LEARNING — Empowering Your Future Through Strategic Mastery",
+  metadataBase: new URL(siteUrl),
+  title: {
+    default: "BODHI LEARNING — Awakening Human Potential",
+    template: "%s | BODHI LEARNING",
+  },
   description:
-    "Join a global community of thinkers. Bodhi Learning provides the rigor and professional training needed to excel in today's competitive landscape.",
+    "Cambridge-certified training in English language, workforce readiness, technical skills, teacher development, and corporate leadership. Trusted by leading institutions across India and beyond.",
+  keywords: [
+    "BODHI LEARNING",
+    "English language training",
+    "Cambridge CELTA",
+    "workforce development",
+    "corporate training",
+    "teacher training",
+    "TKT CIDTT",
+    "professional development",
+    "school coaching",
+    "Hyderabad",
+  ],
+  authors: [{ name: "BODHI LEARNING", url: siteUrl }],
+  creator: "BODHI LEARNING",
+  openGraph: {
+    type: "website",
+    locale: "en_IN",
+    url: siteUrl,
+    siteName: "BODHI LEARNING",
+    title: "BODHI LEARNING — Awakening Human Potential",
+    description:
+      "Cambridge-certified training in English, workforce readiness, technical skills, teacher development, and corporate leadership.",
+    images: [
+      {
+        url: "/icon-512.png",
+        width: 512,
+        height: 512,
+        alt: "BODHI LEARNING",
+      },
+    ],
+  },
+  twitter: {
+    card: "summary",
+    title: "BODHI LEARNING — Awakening Human Potential",
+    description:
+      "Cambridge-certified training in English, workforce readiness, technical skills, teacher development, and corporate leadership.",
+    images: ["/icon-512.png"],
+  },
+  robots: {
+    index: true,
+    follow: true,
+    googleBot: {
+      index: true,
+      follow: true,
+      "max-image-preview": "large",
+      "max-snippet": -1,
+    },
+  },
+  icons: {
+    icon: [
+      { url: "/favicon.ico", sizes: "any" },
+      { url: "/icon.png", type: "image/png", sizes: "32x32" },
+    ],
+    apple: [{ url: "/apple-icon.png", sizes: "180x180", type: "image/png" }],
+  },
 };
 
 export default function RootLayout({

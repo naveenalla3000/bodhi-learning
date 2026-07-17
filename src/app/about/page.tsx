@@ -8,9 +8,9 @@ import FounderEdge from "@/components/about/founder-edge";
 import AboutCta from "@/components/about/about-cta";
 
 export const metadata: Metadata = {
-  title: "About Us | BODHI LEARNING",
+  title: "About Us",
   description:
-    "Learn about BODHI LEARNING's mission to bridge traditional pedagogy and modern industry needs through immersive, skill-first experiences.",
+    "17+ years of L&D leadership from Amazon and ServiceNow, now brought to every learner. Meet the Cambridge-certified team behind BODHI LEARNING's rigorous, skill-first approach.",
 };
 
 export default function AboutPage() {

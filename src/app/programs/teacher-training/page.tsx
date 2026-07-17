@@ -6,9 +6,9 @@ import Footer from "@/components/footer";
 import AnimatedButton from "@/components/animated-button";
 
 export const metadata: Metadata = {
-  title: "Teacher Training | BODHI LEARNING",
+  title: "Teacher Training",
   description:
-    "Advancing the art of instruction through intellectual clarity and rigorous professional development. Join a cohort of visionary educators shaping the future of learning.",
+    "TKT and CIDTT certification tracks covering digital pedagogy, inclusive classrooms, and AI-assisted lesson planning. Upskill your educators at Cambridge standards.",
 };
 
 const pillars = [

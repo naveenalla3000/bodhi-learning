@@ -6,9 +6,9 @@ import Footer from "@/components/footer";
 import AnimatedButton from "@/components/animated-button";
 
 export const metadata: Metadata = {
-  title: "Programs | BODHI LEARNING",
+  title: "Programs",
   description:
-    "Four specialized programs designed to transform learners, educators, institutions, and professionals through rigorous, Cambridge-certified training.",
+    "Four specialized programs — K–12 coaching, teacher training, corporate training, and school partnerships — all grounded in Cambridge-certified rigour.",
 };
 
 const programs = [
